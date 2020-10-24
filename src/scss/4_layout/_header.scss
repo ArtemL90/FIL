@@ -1,0 +1,61 @@
+.header {
+    position: absolute;
+    left:0;right:0;top:0;
+    height: 255px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    line-height: 48px;
+    
+    &::before {
+        @include bgblur;
+        height: 120px;
+        position: absolute;
+        top:-20px;
+        transition: 1s;
+    }
+    &--scroll {
+        &::before {
+            transition: 1s;
+            height: 100%;
+        }
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 3;
+    }
+    &__hamburg {
+        width: 46px;
+        height: 46px;
+        position: absolute;
+        top:50%;left:50%;
+        margin-left: -23px;
+        margin-top: -23px;
+        border-width:1px;
+        border-style: solid;
+        border-color: $grey-color;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor:pointer;
+        &-line {
+            display: flex;
+            &:nth-child(2) {
+                margin:4px 0;
+            }
+            &-dote {
+                width: 2px;
+                height: 2px;
+                background-color: $base-text-color;
+                &:nth-child(2) {
+                    margin:0 4px;
+                }
+            }
+        }
+    }   
+}

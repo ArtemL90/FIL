@@ -1,0 +1,49 @@
+{
+  "name": "web-prjct(webpack)",
+  "version": "1.0.0",
+  "description": "template for web.dev.",
+  "main": "src/js/app.js",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "autoprefixer": "^10.0.0",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.12",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.1.1",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "img-loader": "^3.0.2",
+    "loader": "^2.1.1",
+    "mini-css-extract-plugin": "^0.11.2",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss": "^8.0.8",
+    "postcss-cli": "^8.0.0",
+    "postcss-loader": "^4.0.2",
+    "sass-loader": "^10.0.2",
+    "svg-url-loader": "^6.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-php-loader": "^0.5.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open",
+    "serve": "npm run watch && npm run start",
+    "production": "NODE_ENV=production webpack"
+  },
+  "keywords": [],
+  "author": "Artem L",
+  "license": "MIT",
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "swiper": "^6.3.2"
+  }
+}

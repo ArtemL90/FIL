@@ -1,0 +1,78 @@
+// paginations
+.swiper-pagination {
+    display: flex;
+    align-items: center;
+    left:50%;
+    margin-left: -26px;
+    justify-content: space-between;
+    width: 52px;
+}
+.swiper-pagination-bullet {
+    opacity: 1;
+    background-color: $grey-color;
+}
+.swiper-pagination-bullet-active {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border-radius: 50%;
+    border:1px solid #fff;
+} 
+
+
+.main__top-slider-container {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   z-index: 0;
+   img {
+       width:100%;
+       object-fit:cover;
+       min-height: 100%;       
+   }  
+}
+
+
+
+.products-lnks__slider-container {
+    min-width: 2000px;
+    margin-left: 20px;
+    margin-bottom: -40px; // slider ttl height+margin-top
+
+}
+
+.double-slider-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.double-slider-info {
+    width: $lg-rectangle-width;
+    height: $lg-rectangle-height;
+    position: absolute;
+    right:0;bottom:-60px;
+    &-slide {
+        background-color: $dark-color;
+        padding: 40px;
+        &-txt {
+            height: 350px;
+        }
+    }
+}
+
+.double-slider-itms {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    bottom:35px;
+    padding:0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index:1;
+    .swiper-pagination {
+        position: static;
+        left:0;margin:0;
+    }
+}

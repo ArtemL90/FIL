@@ -1,0 +1,15 @@
+// dark blur rect
+
+@mixin bgblur {
+    content:'';
+    z-index: 1;
+    filter: blur(15px);
+    width: 100%;
+    background: #000000;
+    z-index: 1;
+}
+
+// idents between sections
+@mixin section-idents {
+    margin-top:200px;
+}
