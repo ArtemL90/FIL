@@ -13,3 +13,34 @@
 @mixin section-idents {
     margin-top:200px;
 }
+
+@mixin _1170 {
+    @media (max-width: 1170px){
+        @content;
+    }
+}
+@mixin _979 {
+    @media (max-width: 979px){
+        @content;
+    }
+}
+@mixin _768 {
+    @media (max-width: 768px){
+        @content;
+    }
+}
+@mixin _640 {
+    @media (max-width: 640px){
+        @content;
+    }
+}
+@mixin _480 {
+    @media (max-width: 480px){
+        @content;
+    }
+}
+@mixin _380{
+    @media (max-width: 380px){
+        @content;
+    }
+}

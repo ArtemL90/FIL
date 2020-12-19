@@ -1,0 +1,66 @@
+.product {
+    &__top {
+
+        &-inner {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            height: 40%;
+            padding-top: 30px;
+        }
+        &-ttl {
+            position: relative;
+            top:auto;
+            transform: none;
+            margin: 0;
+            &-outer {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                height: 60%;
+            }   
+        }
+        &-subttl {
+            color: $grey-color;
+            margin-bottom: 100px;
+            b {
+                font-size: 24px;
+                letter-spacing: 1.8px;
+                color: $base-text-color;
+                font-weight: 300;
+            }
+        }
+        &-btn {
+            background-color: $base-text-color;
+            color: $dark-color;
+        }
+    }
+    &__info {
+        &-card {
+            &-txt {
+                color: $grey-color;
+                letter-spacing: 1px;
+                font-size: 15px;
+                b {
+                    font-weight: 300;
+                    color: $base-text-color;
+                    font-size: 16px;
+                }
+                &-part {
+                    &:nth-child(2) {
+                        margin:30px 0;
+                    }
+                    &:nth-child(3) {
+                        font-size: 14px;
+                    }
+                    li {
+                       list-style-type: none;
+                    }
+                }
+            }
+        }
+    }
+    &__gallery {
+        @include section-idents;
+    }
+}

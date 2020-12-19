@@ -1,0 +1,44 @@
+.concept{
+    &__team {
+        @include section-idents;
+        &-inner {
+            position: relative;
+            padding-bottom: calc(#{$md-rectangle-width} + 50px);
+        }
+        &-ttl {
+            font-family: ShreeDev0714;
+            font-size: 36px;
+            font-weight: 400;
+            letter-spacing: 2.7px;
+            margin-bottom: 80px;
+            color: $base-text-color;
+        }
+        &-brands {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            &-grp {
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                background-color: $dark-color;
+                &-icn {
+                    background-color: $dark-color;
+                    width: $md-rectangle-width;
+                    height: calc(#{$md-rectangle-width} / 2);
+                    object-fit: cover;
+                }
+            }
+        }
+        &-backgrd {
+            height:calc(#{$md-rectangle-height} + 100px);
+            object-fit: cover;
+            position: absolute;
+            bottom: 0;
+            width: calc(100% + (#{$left-itm-ident} * -1) - 20px);
+            left: $left-itm-ident;
+        }
+    }
+}

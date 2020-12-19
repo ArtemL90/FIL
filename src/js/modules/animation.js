@@ -1,14 +1,15 @@
-// animate header with scroll
-const containerEl = document.querySelector('body');
-const headerEl = document.querySelector('.js_header');
+import sal from 'sal.js';
+import jump from 'jump.js';
+sal();
 
-containerEl.addEventListener('scroll', function() {
-    if(this.scrollTop > 0 ) {
-        if(headerEl.classList.contains('header--scroll')) {
-            return;
-        }
-        headerEl.classList.add('header--scroll');
-    }else {
-        headerEl.classList.remove('header--scroll');
-    }
-})
+
+// SMOOTH SCROLL FUNCTIONALITY
+//const scrollBtnEl = document.querySelector('.js_scroll')
+
+/*scrollBtnEl.addEventListener('click', (e) => {
+  e.preventDefault();
+  jump('.about');
+})*/
+
+
+

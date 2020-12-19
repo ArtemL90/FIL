@@ -9,7 +9,7 @@
         object-fit: cover;
         position: absolute;
         display: block;
-        left: -130px;
+        left: $left-itm-ident;
     }
     &__inner {
         position: relative;

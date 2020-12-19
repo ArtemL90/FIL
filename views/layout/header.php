@@ -1,8 +1,22 @@
-<header class="header js_header">
+<header class="header  js_header">
+    <div class="blur-line js_blur"></div>
+    <div class="header__backgr-container">
+        <div class="header__backgr-outer">
+            <img data-page="main" src="../../dist/img/main/home-hero-1.jpg" alt="header-backgr" class="header__backgr js_menu-backgr">
+            <img data-page="concept" src="../../dist/img/concept/concept-hero.jpg" alt="header-backgr" class="header__backgr js_menu-backgr">
+            <img data-page="products" src="../../dist/img/products/products-hero.jpg" alt="header-backgr" class="header__backgr js_menu-backgr">
+            <img data-page="story" src="../../dist/img/main/home-hero-3.jpg" alt="header-backgr" class="header__backgr js_menu-backgr">
+        </div>
+    </div>
     <div class="header__inner page-inner">
         <div class="header__logo main-logo">fil</div>
         <!-- HAMBURGER BTN -->
-        <div class="header__hamburg">
+        <div class="header__hamburg js_menu-btn">
+            <div class="header__hamburg-line">
+                <div class="header__hamburg-line-dote"></div>
+                <div class="header__hamburg-line-dote"></div>
+                <div class="header__hamburg-line-dote"></div>
+            </div>
             <div class="header__hamburg-line">
                 <div class="header__hamburg-line-dote"></div>
                 <div class="header__hamburg-line-dote"></div>
@@ -22,17 +36,17 @@
         <!-- HAMBURGER BTN END -->
         <nav class="header__navigation navigation">
             <ul class="header__navigation-lst navigation__lst">
-                <li class="header__navigation-lst-line navigation__lst-line">
-                    <a href="#" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Home</a>
+                <li data-page="main" class="header__navigation-lst-line navigation__lst-line js_nav-el">
+                    <a href="/" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Home</a>
                 </li>
-                <li class="header__navigation-lst-line navigation__lst-line">
-                    <a href="#" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Concept</a>
+                <li data-page="concept"  class="header__navigation-lst-line navigation__lst-line js_nav-el">
+                    <a href="/views/pages/concept" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Concept</a>
                 </li>
-                <li class="header__navigation-lst-line navigation__lst-line">
-                    <a href="#" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Products</a>
+                <li data-page="products"  class="header__navigation-lst-line navigation__lst-line js_nav-el">
+                    <a href="/views/pages/products" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Products</a>
                 </li>
-                <li class="header__navigation-lst-line navigation__lst-line">
-                    <a href="#" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Story</a>
+                <li data-page="story"  class="header__navigation-lst-line navigation__lst-line js_nav-el">
+                    <a href="/views/pages/story" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Story</a>
                 </li>
             </ul>
         </nav>

@@ -5,10 +5,10 @@
            <nav class="footer__navigation navigation footer__part-even">
                 <ul class="footer__navigation-lst navigation__lst">
                     <li class="footer__navigation-lst-line navigation__lst-line">
-                        <a href="#" class="footer__navigation-lst-line-lnk navigation__lst-line-lnk">Home</a>
+                        <a href="views/layout/main.php" class="footer__navigation-lst-line-lnk navigation__lst-line-lnk">Home</a>
                     </li>
                     <li class="footer__navigation-lst-line navigation__lst-line">
-                        <a href="#" class="footer__navigation-lst-line-lnk navigation__lst-line-lnk">Concept</a>
+                        <a href="views/pages/concept.php" class="footer__navigation-lst-line-lnk navigation__lst-line-lnk">Concept</a>
                     </li>
                     <li class="footer__navigation-lst-line navigation__lst-line">
                         <a href="#" class="footer__navigation-lst-line-lnk navigation__lst-line-lnk">Products</a>

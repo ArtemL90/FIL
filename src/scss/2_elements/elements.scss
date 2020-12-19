@@ -1,1 +1,199 @@
 @import 'forms';
+@import 'active&inactive';
+
+// tittles & text
+h1 {
+  font-size: 66px;
+  color: $base-text-color;
+  font-family: ShreeDev0714;
+  font-weight: 400;
+}
+h2 {
+  color: $grey-color;
+  font-weight: 300;
+  font-size: $base-font-size;
+  letter-spacing: 1.2px;
+}
+h3 {
+  margin-top:15px;
+  margin-bottom: 25px;
+  line-height: 50px;
+  font-family: ShreeDev0714;
+  font-weight: 400;
+  font-size: 36px;
+  letter-spacing: 2.7px;
+}
+.txt-content {
+  line-height: 26px;
+  margin-bottom:20px;
+}
+
+// elements
+.pic-rectangle-container {
+  position: relative;
+}
+.pic-rectangle {
+  object-fit: cover;
+  display: block;
+  &--sm {
+    width: $sm-rectangle-width;
+    height: $sm-rectangle-height;
+  }
+  &--md {
+    width: $md-rectangle-width;
+    height: $md-rectangle-height;
+    position:absolute;
+    top:50%;
+    transform: translate(0, -50%);
+  }
+  &--lg {
+    width: $xl-rectangle-width;
+    height: $lg-rectangle-height;
+  }
+}
+.line-lnk {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  color: $base-text-color;
+  line-height: 8px;
+  &::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $base-text-color;
+    margin-right: 10px;
+  }
+}
+
+.main-logo {
+  font-family: Exo2;
+  font-weight: 300;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+.circle-el {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-weight: 400;
+  text-align: center;
+  line-height: 100px;
+  box-shadow: none;
+}
+
+.navigation {
+  &__lst {
+    display: flex;
+    &-line {
+        list-style-type: none;
+        &:nth-child(2) {
+            margin:0 30px;
+        }
+        &:nth-child(3) {
+            margin-right: 30px;
+        }
+        &-lnk {
+          
+        }
+        
+    }
+  } 
+}
+.txt-block {
+  max-width: $text-block-width;
+}
+.product-card {
+  &__lnk {
+    width: $md-rectangle-width;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    cursor: none;
+    &-pic {
+      width: 100%;
+      height: $md-rectangle-height;
+      object-fit: cover;;
+    }
+    &-ttl {
+      text-align: right; 
+    }
+  }
+}
+
+.info-card {
+  width: $lg-rectangle-width;
+  height: $lg-rectangle-height;
+  position: absolute;
+  right:20px;
+  &__content {
+    height: 100%;
+    width: 100%;
+    background-color: $dark-color;
+    padding: 40px;
+  }
+  .txt-content {
+    width: 280px;
+    height: 350px;
+  } 
+}
+
+.blur-line {
+  height: 120px;
+  position: absolute;
+  left:-50%;right: -50%;
+  background-color: $dark-color;
+  filter: blur(20px);
+  width: 200%;
+  z-index: 2;
+}
+
+
+.cursor {
+  position: fixed;
+  border-radius: 50%;
+  text-transform: capitalize;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 5;
+  opacity: .9;
+  display: none;
+  &--dark, &--light {
+    display: block;
+  }
+  &--dark {
+    color: $base-text-color;
+    background-color: $dark-color;
+  }
+  &--light {
+    color: $dark-color;
+    background-color: $base-text-color;
+  }
+  &--active {
+    animation: 0.7s forwards decrease, 0.1s linear 0s forwards removeText;
+  }
+  &--inactive {
+    font-size: 0;
+    animation: 0.7s forwards increase, 0.1s linear 0.5s forwards addText;
+  }
+  @keyframes decrease { 
+    from {width: 100px; height: 100px;} 
+    to { width: 20px; height: 20px;} 
+  };
+  @keyframes increase { 
+    from {width: 20px; height: 20px;} 
+    to { width: 100px; height: 100px;} 
+  };
+  @keyframes removeText { 
+    from {font-size: $base-font-size;} 
+    to { font-size: 0;} 
+  };
+  @keyframes addText { 
+    from {font-size: 0;} 
+    to { font-size: $base-font-size;} 
+  };
+} 
