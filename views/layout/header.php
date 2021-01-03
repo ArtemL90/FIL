@@ -40,13 +40,13 @@
                     <a href="/" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Home</a>
                 </li>
                 <li data-page="concept"  class="header__navigation-lst-line navigation__lst-line js_nav-el">
-                    <a href="/views/pages/concept" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Concept</a>
+                    <a href="concept" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Concept</a>
                 </li>
                 <li data-page="products"  class="header__navigation-lst-line navigation__lst-line js_nav-el">
-                    <a href="/views/pages/products" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Products</a>
+                    <a href="products" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Products</a>
                 </li>
                 <li data-page="story"  class="header__navigation-lst-line navigation__lst-line js_nav-el">
-                    <a href="/views/pages/story" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Story</a>
+                    <a href="story" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Story</a>
                 </li>
             </ul>
         </nav>
