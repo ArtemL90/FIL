@@ -88,6 +88,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
+        z-index: 2;
         .swiper-pagination {
             flex-direction: column;
             height: 52px;
@@ -97,10 +98,12 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            
         }
         .swiper-pagination-bullet {
             opacity: 1;
             background-color: $grey-color;
+            position: relative;
         }
         .swiper-pagination-bullet-active {
             width: 12px;

@@ -143,12 +143,11 @@ h3 {
 }
 
 .blur-line {
-  height: 120px;
+  height: 0px;
   position: absolute;
-  left:-50%;right: -50%;
+  left: -100px;right: -100px;
   background-color: $dark-color;
-  filter: blur(20px);
-  width: 200%;
+  box-shadow: 0px 0px 65px 65px rgba(0,0,0,1);
   z-index: 2;
 }
 
@@ -161,9 +160,11 @@ h3 {
   pointer-events: none;
   z-index: 5;
   opacity: .9;
-  display: none;
+  font-size: 0;
+  animation: 0.7s forwards decrease, 0.1s linear 0s forwards removeText;
   &--dark, &--light {
     display: block;
+    animation: 0.7s forwards increase, 0.1s linear 0.5s forwards addText;
   }
   &--dark {
     color: $base-text-color;
@@ -177,7 +178,6 @@ h3 {
     animation: 0.7s forwards decrease, 0.1s linear 0s forwards removeText;
   }
   &--inactive {
-    font-size: 0;
     animation: 0.7s forwards increase, 0.1s linear 0.5s forwards addText;
   }
   @keyframes decrease { 
@@ -197,3 +197,78 @@ h3 {
     to { font-size: $base-font-size;} 
   };
 } 
+
+.preloader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  background: radial-gradient(#CECECE, #fff);
+	display: flex;
+	justify-content: center;
+  align-items: center;
+  filter: invert(100%);
+  &__el {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+	  border-radius: 100%;
+	  background: linear-gradient(165deg, rgba(255,255,255,1) 0%, rgb(220, 220, 220) 40%, rgb(170, 170, 170) 98%, rgb(10, 10, 10) 100%);
+    position: relative;
+    &-loader {
+      position: relative;
+      .main-logo {
+        width: 100%;
+        text-align: center;
+         color: $dark-color;
+         line-height: 150px;
+         padding-left: 1rem;
+      }
+      &:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        border-bottom: 0 solid #ffffff05;
+        box-shadow: 
+          0 -10px 20px 20px #ffffff40 inset,
+          0 -5px 15px 10px #ffffff50 inset,
+          0 -2px 5px #ffffff80 inset,
+          0 -3px 2px #ffffffBB inset,
+          0 2px 0px #ffffff,
+          0 2px 3px #ffffff,
+          0 5px 5px #ffffff90,
+          0 10px 15px #ffffff60,
+          0 10px 20px 20px #ffffff40;
+        filter: blur(3px);
+        animation: 2s rotate linear infinite;
+      }
+      @keyframes rotate {
+        100% {
+          transform: rotate(360deg)
+        }
+      }
+    }
+  }
+  &--hidden {
+    animation: 2s fadeOut ease-in-out forwards;
+    .preloader__el {
+      animation: 1s decrease linear forwards;
+    }
+    @keyframes decrease {
+      100% {
+        transform: scale(0)
+      }
+    }
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility:hidden;
+    }
+  }
+}

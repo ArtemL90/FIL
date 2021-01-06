@@ -9,7 +9,9 @@
         </div>
     </div>
     <div class="header__inner page-inner">
-        <div class="header__logo main-logo">fil</div>
+        <a href="/">
+            <div class="header__logo main-logo">fil</div>
+        </a>
         <!-- HAMBURGER BTN -->
         <div class="header__hamburg js_menu-btn">
             <div class="header__hamburg-line">

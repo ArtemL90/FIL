@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="../../dist/css/app.css?v=<?php echo date("Y-m-d(H:i:s)");?>">
 </head>
 <body data-barba="wrapper">
+    <!-- PRELOADER -->
+    <div class="preloader js_preloader"></div>
+    <!-- PRELOADER END -->
     <!-- CURSOR -->
     <div class="cursor circle-el js_cursor"></div>
     <!-- CURSOR  END -->

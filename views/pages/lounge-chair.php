@@ -63,8 +63,8 @@
     <section class="product__gallery">
         <div class="product__gallery-inner page-inner">
             <!-- GALLERY SLIDER -->
-            <div data-text="next" class="swiper-container gallery-slider swipe-area js_lounge-chair-gallery-slider js_swipe-area">
-                <div class="swiper-wrapper gallery-slider__wrapper">
+            <div  class="swiper-container gallery-slider  js_lounge-chair-gallery-slider ">
+                <div data-text="next" class="swipe-area swiper-wrapper gallery-slider__wrapper js_swipe-area">
                     <div class="swiper-slide gallery-slider__slide">
                         <img src="../../dist/img/product page/s2-slide-1.jpg" alt="gallery-img" class="gallery-slider__slide-content">
                     </div>

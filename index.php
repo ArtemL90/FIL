@@ -10,12 +10,21 @@
     <link rel="stylesheet" href="dist/css/app.css?v=<?php echo date("Y-m-d(H:i:s)");?>">
 </head>
 <body data-barba="wrapper">
+    <!-- PRELOADER -->
+    <div class="preloader js_preloader">
+        <div class="preloader__el">
+	        <div class="preloader__el-loader">
+                <div class="main-logo">fil</div>
+            </div>
+        </div>
+    </div>
+    <!-- PRELOADER END -->
     <!-- CURSOR -->
     <div class="cursor circle-el js_cursor"></div>
     <!-- CURSOR  END -->
     <?php include "views/layout/header.php" ?>
     <?php include "views/layout/main.php" ?>
     <?php include "views/layout/footer.php" ?>
-    <script src="dist/js/app.js?v=<?php echo date("Y-m-d(H:i:s)");?>"></script>
+    <script defer src="dist/js/app.js?v=<?php echo date("Y-m-d(H:i:s)");?>"></script>
 </body>
 </html>

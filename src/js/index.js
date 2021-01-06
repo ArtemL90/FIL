@@ -1,7 +1,7 @@
 // plugins
 import './modules/fullPage';
 // modules
-
+import './modules/preloader.js';
 import './modules/sliders.js';
 import './modules/barbaInst.js';
 import './modules/animation.js';
