@@ -39,16 +39,16 @@
         <nav class="header__navigation navigation">
             <ul class="header__navigation-lst navigation__lst">
                 <li data-page="main" class="header__navigation-lst-line navigation__lst-line js_nav-el">
-                    <a href="/" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Home</a>
+                    <a href="/" class="header__navigation-lst-line-lnk lnk-effect navigation__lst-line-lnk">Home</a>
                 </li>
                 <li data-page="concept"  class="header__navigation-lst-line navigation__lst-line js_nav-el">
-                    <a href="concept" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Concept</a>
+                    <a href="concept" class="header__navigation-lst-line-lnk lnk-effect navigation__lst-line-lnk">Concept</a>
                 </li>
                 <li data-page="products"  class="header__navigation-lst-line navigation__lst-line js_nav-el">
-                    <a href="products" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Products</a>
+                    <a href="products" class="header__navigation-lst-line-lnk lnk-effect navigation__lst-line-lnk">Products</a>
                 </li>
                 <li data-page="story"  class="header__navigation-lst-line navigation__lst-line js_nav-el">
-                    <a href="story" class="header__navigation-lst-line-lnk navigation__lst-line-lnk">Story</a>
+                    <a href="story" class="header__navigation-lst-line-lnk lnk-effect navigation__lst-line-lnk">Story</a>
                 </li>
             </ul>
         </nav>

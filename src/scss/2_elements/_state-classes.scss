@@ -1,0 +1,63 @@
+.active-nav-el {
+  a {
+    color: $base-text-color;
+  }
+}
+.active {
+  display: block!important;
+  animation: fadeIn cubic-bezier(0.5, 1, 0.89, 1) .6s;
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+}
+.is-fixed {
+  position: fixed;
+}
+.is-blur {
+  animation: addBlur 1s ease-in forwards;
+  @keyframes addBlur {
+      0%{filter: blur(0);}
+      100%{filter: blur(2px);}
+  }
+}
+.circle-btn {
+  width: auto;
+  transition: 1s;
+  border-radius: 100%;
+  position: relative;
+  &__txt {
+     z-index: 2;
+     position: relative;
+  }
+  &::after {
+    @include pseudo;
+    width: 0;height: 0;
+    border-radius: 100%;
+    background-color: $dark-color;
+    left: 50%;top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.7s;
+    z-index: 1;
+  }
+  &:hover {
+    transition: 0.7s;
+    &::after {
+      transition: 0.7s;
+      width: 105%;height: 105%;
+    }
+    .circle-btn__txt {
+       color: $base-text-color;
+       transition: 1s;
+    }
+  }
+}
+.lnk-effect {
+  color: $grey-color;
+  transition: color #{$text-hover-trans} linear; 
+  &:hover {
+    transition: color #{$text-hover-trans} linear;
+    color: $base-text-color;
+    text-shadow: 0px 0px 3px #{$base-text-color}; 
+  }
+}

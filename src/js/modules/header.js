@@ -1,3 +1,5 @@
+import { holdBody, pageTransInterval } from './animation.js';
+
 const containerEl = document.querySelector('body');
 const navEls = document.querySelectorAll('.js_nav-el');
 const headerEl = document.querySelector('.js_header');
@@ -50,6 +52,7 @@ document.addEventListener('scroll', () => {
 });
 
 menuBtnEl.addEventListener('click', () => {
+    holdBody();
     if(headerEl.classList.contains('header--active')) {
         headerEl.classList.remove('header--active')
           
@@ -77,7 +80,8 @@ navEls.forEach(navEl => {
     });
     navEl.addEventListener('click', () => {
         if(headerEl.classList.contains('header--active')) {
-            headerEl.classList.remove('header--active')  
+            headerEl.classList.remove('header--active');
+            holdBody()
         };
     })
 });

@@ -1,4 +1,4 @@
-<div class="main page-outer js_container" data-page-name="main" data-group-name="main" data-barba="container" data-barba-namespace="main">
+<div class="main page-outer  js_container" data-page-name="main" data-group-name="main" data-barba="container" data-barba-namespace="main">
     <section class="main__top section-main">
         <!-- MAIN SLIDER -->
         <div data-text="next" class="swiper-container main__top-slider-container swipe-area js_main-slider js_swipe-area">
@@ -18,14 +18,14 @@
         <div class="main__top-inner section-main__inner page-inner">
             <h1 class="main__top-ttl section-main__ttl">New<br> collection</h1>
             <div class="main__top-itms section-main__itms">
-                <a href="#" class="main__top-scroll">Scroll</a>
+                <a href="#" class="main__top-scroll lnk-effect js_scroll">Scroll</a>
                 <div class="swiper-pagination js_main-slider-pagination"></div>
                 <div class="main__top-itms-date">24/07/2020</div>
             </div>
         </div>
         <div class="blur-line"></div>
     </section>
-    <section class="main__concept page-inner line-block">
+    <section class="main__concept page-inner line-block js_scroll-section">
         <div class="main__concept-left txt-block">
             <h2 class="main__concept-left-ttl">Concept</h2>
             <h3 class="main__concept-left-subttl">The meaning of&nbsp;Tradition </h3>
@@ -34,7 +34,7 @@
             inspired the latest MASS Series called “SUMI LIMITED.” 
             The series uses the inky black charred cedar and steel frame. 
             The design highlights the contrast in the materials used.</div>
-            <a href="#" class="main__concept-left-lnk line-lnk">Read more</a>
+            <a href="#" class="main__concept-left-lnk line-lnk js_popup-btn">Read more</a>
         </div>
         <div class="main__concept-right pic-rectangle-container">
             <img src="../dist/img/main/home-concept-s.jpg" alt="rectangle" class="main__concept-right-md pic-rectangle--md">
@@ -128,7 +128,7 @@
             FIL always starts their day with a question of “what it means to have a fulfilling life.” 
             Here with focus on the millennium old Aso tradition, 
             FIL sets off to search materials, functions and designs to represent its tradition.</div>
-            <a href="#" class="main__story-left-lnk line-lnk">Read more</a>
+            <a href="#" class="main__story-left-lnk line-lnk js_popup-btn">Read more</a>
         </div>
         <div class="main__concept-right pic-rectangle-container">
             <img src="../dist/img/main/home-story-s.jpg" alt="rectangle" class="main__story-right-md pic-rectangle--md">

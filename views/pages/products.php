@@ -7,12 +7,12 @@
         <div class="products__top-inner section-main__inner page-inner">
             <h1 class="products__top-ttl section-main__ttl">Products</h1>
             <div class="products__top-itms section-main__itms">
-                <a href="#" class="products__top-scroll">Scroll</a>
+                <a href="#" class="products__top-scroll lnk-effect js_scroll">Scroll</a>
             </div>
         </div>
         <div class="blur-line"></div>
     </section>
-    <section class="products__lnks page-inner">
+    <section class="products__lnks page-inner js_scroll-section">
         <div class="products__lnks-inner">
             <div class="products__lnks-grp">
                 <?php include "../parts/product-cards/dining-chair.php" ?>

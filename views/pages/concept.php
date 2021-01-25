@@ -7,12 +7,12 @@
         <div class="concept__top-inner section-main__inner page-inner">
             <h1 class="concept__top-ttl section-main__ttl">The meaning<br>of Tradition</h1>
             <div class="concept__top-itms section-main__itms">
-                <a href="#" class="concept__top-scroll">Scroll</a>
+                <a href="#" class="concept__top-scroll lnk-effect js_scroll">Scroll</a>
             </div>
         </div>
         <div class="blur-line"></div>
     </section>
-    <section class="concept__info">
+    <section class="concept__info js_scroll-section">
         <div class="concept__info-inner page-inner">
             <div class="concept__info-ticker">
                 <div class="concept__info-ticker-inner">

@@ -7,12 +7,12 @@
         <div class="story__top-inner section-main__inner page-inner">
             <h1 class="story__top-ttl section-main__ttl">Why we do</h1>
             <div class="story__top-itms section-main__itms">
-                <a href="#" class="story__top-scroll">Scroll</a>
+                <a href="#" class="story__top-scroll lnk-effect js_scroll">Scroll</a>
             </div>
         </div>
         <div class="blur-line"></div>
     </section>
-    <section class="story__info">
+    <section class="story__info js_scroll-section">
         <div class="story__info-inner page-inner">
             <div class="story__info-ticker">
                 <div class="story__info-ticker-inner">
