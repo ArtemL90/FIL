@@ -37,6 +37,25 @@
     min-width: 2000px;
     margin-left: 20px;
     margin-bottom: -40px; // slider ttl height+margin-top
+    .product-card {
+        &__lnk-ttl {
+           transform: translateY(-50px);
+           opacity: 0; 
+        }
+    }
+    &--active {
+        .product-card {
+            transition: ease-in-out $anim-trans-time;
+            transition-delay: 0.5s;
+            transform: translateX(0);
+            &__lnk-ttl {
+                transition: $anim-trans-time;
+                transition-delay: $anim-trans-time;
+                transform: translateY(0);
+                opacity: 1;
+            }
+        } 
+    }
 }
 .double-slider {
     &-bg {

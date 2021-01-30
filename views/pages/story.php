@@ -1,11 +1,12 @@
 <!-- head, meta tags, css ..-->
 <?php include "../main-parts/top-part.php" ?>
 <!-- head, meta tags, css .. end-->
-<div class="story page-outer js_container" data-page-name="story" data-group-name="page" data-barba="container" data-barba-namespace="story">
+<div class="story page-outer js_container"data-scroll-section data-scroll data-page-name="story" data-group-name="page" data-barba="container" data-barba-namespace="story">
     <section class="story__top section-main">
         <img src="../../dist/img/main/home-hero-3.jpg" alt="backgrd" class="story__top-backgrd">
         <div class="story__top-inner section-main__inner page-inner">
-            <h1 class="story__top-ttl section-main__ttl">Why we do</h1>
+            <h1 class="story__top-ttl section-main__ttl">
+                <span>W</span><span>h</span><span>y</span> <span>w</span><span>e</span> <span>d</span><span>o</span></h1>
             <div class="story__top-itms section-main__itms">
                 <a href="#" class="story__top-scroll lnk-effect js_scroll">Scroll</a>
             </div>
@@ -22,7 +23,7 @@
                     <div class="story__info-ticker-txt">Fulfilling</div>
                 </div>
             </div>
-            <img src="../../dist/img/story/story-intro.jpg" alt="rectangle" class="story__info-pic pic-rectangle--sm">
+            <img src="../../dist/img/story/story-intro.jpg" alt="rectangle" class="story__info-pic pic-rectangle--sm" data-scroll data-scroll-direction="horizontal"  data-scroll-speed="-2" data-scroll-repeat="true">
             <div class="story__info-card info-card">
                 <div class="info-card__content">
                     <h2 class="story__info-card-ttl">Our story</h2>
@@ -54,7 +55,7 @@
             </div>
         </div>
         <div class="story__about-inner page-inner">
-            <div class="swiper-container double-slider-info info-card js_story-double-slider-info">
+            <div class="swiper-container double-slider-info info-card js_story-double-slider-info" data-scroll  data-scroll-speed="1" data-scroll-repeat="true">
                 <div class="swiper-wrapper double-slider-info__wrapper swiper-no-swiping">
                     <div class="swiper-slide double-slider-info__slide info-card__content">
                         <h2 class="double-slider-info__slide-ttl">about</h2>

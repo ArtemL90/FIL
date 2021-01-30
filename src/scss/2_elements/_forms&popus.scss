@@ -179,6 +179,7 @@
 .thanks {
     opacity: 0;
     visibility: hidden;
+    z-index: 0;
     &__txt {
         color: $grey-color;
         margin-top: 25px;
@@ -190,18 +191,32 @@
 // functions anim
 @keyframes fadeInPopup {
     0% {opacity:0;}
-    100% {opacity:1;visibility: visible;}
+    100% {opacity:1;
+        visibility: visible;
+        z-index: 1;
+    }
 }
 @keyframes fadeOutPopup {
     0% {opacity:1;}
-    100% {opacity:0;visibility: hidden;}
+    100% {opacity:0;
+        visibility: hidden;
+        z-index: 0;
+    }
 }
 @keyframes addCirBackgrd {
-    0%{height: 0;width: 0;}
-    100%{height: 200%;width: 200%;}
+    0%{height: 0;
+        width: 0;
+    }
+    100%{height: 200%;
+        width: 200%;
+    }
 }
 @keyframes removeCirBackgrd {
-    0%{height: 200%;width: 200%;}
-    100%{height: 0;width: 0;}
+    0%{height: 200%;
+        width: 200%;
+    }
+    100%{height: 0;
+        width: 0;
+    }
 } 
 

@@ -9,7 +9,7 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="../../dist/css/app.css?v=<?php echo date("Y-m-d(H:i:s)");?>">
 </head>
-<body class="is-fixed" data-barba="wrapper">
+<body class="is-fixed" data-barba="wrapper" data-scroll-container data-scroll-target="0">
      <!-- PRELOADER -->
     <div class="preloader js_preloader">
         <div class="preloader__el">
@@ -41,3 +41,4 @@
     <!-- PAGE TRANSITION END -->
     <div class="blur-backgrnd js_blur">
         <?php include "../../views/layout/header.php" ?>
+<!-- BOTTOM PART IN THE FILE "views/main-parts/bottom-part.php  -->                

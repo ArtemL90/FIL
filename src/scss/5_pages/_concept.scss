@@ -19,6 +19,13 @@
             align-items: center;
             position: relative;
             z-index: 1;
+            filter: invert(100%);
+            opacity: 0.5;
+            &--active {
+                filter: invert(0%);
+                transition: ease-in-out #{$anim-trans-time};
+                opacity: 1;
+            }
             &-grp {
                 width: auto;
                 display: flex;

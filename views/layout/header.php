@@ -1,4 +1,4 @@
-<header class="header  js_header">
+<header  class="header  js_header">
     <div class="blur-line js_blur"></div>
     <div class="header__backgr-container">
         <div class="header__backgr-outer">

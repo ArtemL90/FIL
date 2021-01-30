@@ -45,6 +45,7 @@ h3 {
     position:absolute;
     top:50%;
     transform: translate(0, -50%);
+    z-index: 1;
   }
   &--lg {
     width: $xl-rectangle-width;
@@ -59,7 +60,7 @@ h3 {
   color: $base-text-color;
   position: relative;
   padding-left: 18px;
-  transition: text-shadow #{$text-hover-trans};
+  //transition: text-shadow #{$text-hover-trans};
   &::before {
     @include pseudo;
     width: 8px;
@@ -72,11 +73,11 @@ h3 {
     transition: transform #{$text-hover-trans};
   }
   &:hover {
-    transition: text-shadow #{$text-hover-trans};
-    text-shadow: 0px 0px 3px #{$base-text-color};
+    //transition: text-shadow #{$text-hover-trans};
+    //text-shadow: 0px 0px 3px #{$base-text-color};
     &::before {
       transition: transform #{$text-hover-trans};
-      transform: scale(2);
+      transform: scale(1.5);
       box-shadow: 0px 0px 2px 1px #{$base-text-color};
     }
   }
@@ -121,6 +122,26 @@ h3 {
   max-width: $text-block-width;
 }
 .product-card {
+  &[data-swiper-slide-index='1'] {
+    transform: translateX(calc(#{-$md-rectangle-width} * 0.8));
+    
+  }
+  &[data-swiper-slide-index='2'] {
+    transform: translateX(calc(#{-$md-rectangle-width} * 1.6));
+    
+  }
+  &[data-swiper-slide-index='3'] {
+    transform: translateX(calc(#{-$md-rectangle-width} * 2.4));
+    
+  }
+  &[data-swiper-slide-index='4'] {
+    transform: translateX(calc(#{-$md-rectangle-width} * 3.2));
+    
+  }
+  &[data-swiper-slide-index='5'] {
+    transform: translateX(calc(#{-$md-rectangle-width} * 4));
+    
+  }
   &__lnk {
     width: $md-rectangle-width;
     height: 440px;

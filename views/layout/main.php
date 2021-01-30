@@ -1,5 +1,5 @@
-<div class="main page-outer  js_container" data-page-name="main" data-group-name="main" data-barba="container" data-barba-namespace="main">
-    <section class="main__top section-main">
+<div class="main page-outer  js_container" data-scroll-section data-scroll  data-page-name="main" data-group-name="main" data-barba="container" data-barba-namespace="main">
+    <section data-scroll  data-scroll-speed="2" data-scroll-repeat="true" class="main__top section-main">
         <!-- MAIN SLIDER -->
         <div data-text="next" class="swiper-container main__top-slider-container swipe-area js_main-slider js_swipe-area">
             <div class="swiper-wrapper main__top-slider-wrapper">
@@ -16,7 +16,9 @@
         </div>
         <!-- MAIN SLIDER END -->
         <div class="main__top-inner section-main__inner page-inner">
-            <h1 class="main__top-ttl section-main__ttl">New<br> collection</h1>
+            <h1 class="main__top-ttl section-main__ttl"><span>N</span><span>e</span><span>w</span><br>
+             <span>c</span><span>o</span><span>l</span><span>l</span><span>e</span><span>c</span><span>t</span><span>i</span><span>o</span><span>n</span>
+            </h1>
             <div class="main__top-itms section-main__itms">
                 <a href="#" class="main__top-scroll lnk-effect js_scroll">Scroll</a>
                 <div class="swiper-pagination js_main-slider-pagination"></div>
@@ -26,19 +28,19 @@
         <div class="blur-line"></div>
     </section>
     <section class="main__concept page-inner line-block js_scroll-section">
-        <div class="main__concept-left txt-block">
-            <h2 class="main__concept-left-ttl">Concept</h2>
-            <h3 class="main__concept-left-subttl">The meaning of&nbsp;Tradition </h3>
+        <div id="left-text-el" class="main__concept-left txt-block js_text-block" data-scroll data-scroll-class="visible">
+            <h2  class="main__concept-left-ttl">Concept</h2>
+            <h3  class="main__concept-left-subttl">The meaning of&nbsp;Tradition </h3>
             <div class="main__concept-left-txt txt-content">
             Noyaki, Aso's annual controlled burning of the grassland 
             inspired the latest MASS Series called “SUMI LIMITED.” 
             The series uses the inky black charred cedar and steel frame. 
             The design highlights the contrast in the materials used.</div>
-            <a href="#" class="main__concept-left-lnk line-lnk js_popup-btn">Read more</a>
+            <a  href="#" class="main__concept-left-lnk line-lnk js_popup-btn">Read more</a>
         </div>
         <div class="main__concept-right pic-rectangle-container">
-            <img src="../dist/img/main/home-concept-s.jpg" alt="rectangle" class="main__concept-right-md pic-rectangle--md">
-            <img src="../dist/img/main/home-concept-l.jpg" alt="rectangle" class="main__concept-right-lg pic-rectangle--lg">
+            <img  src="../dist/img/main/home-concept-s.jpg" alt="rectangle" class="main__concept-right-md pic-rectangle--md">
+            <img  src="../dist/img/main/home-concept-l.jpg" alt="rectangle" class="main__concept-right-lg pic-rectangle--lg" data-scroll data-scroll-direction="horizontal"  data-scroll-speed="1" data-scroll-repeat="true">
         </div>
     </section>
     <section class="products-lnks">
@@ -50,7 +52,7 @@
                 Products
             </h2>
             <!-- LINKS SLIDER -->
-            <div class="swiper-container products-lnks__slider-container js_lnks-slider">
+            <div class="swiper-container products-lnks__slider-container js_lnks-slider" data-scroll data-scroll-class="visible">
                 <div  class="swiper-wrapper products-lnks__slider-wrapper">
                     <!-- Slides -->
                     <?php include "views/parts/product-cards/dining-chair.php" ?>
@@ -80,7 +82,7 @@
             </div>
         </div>
         <div class="main__feature-inner page-inner">
-            <div class="swiper-container double-slider-info info-card js_main-double-slider-info">
+            <div class="swiper-container double-slider-info info-card js_main-double-slider-info" data-scroll  data-scroll-speed="1" data-scroll-repeat="true">
                 <div class="swiper-wrapper double-slider-info__wrapper swiper-no-swiping">
                     <div class="swiper-slide double-slider-info__slide info-card__content">
                         <h2 class="double-slider-info__slide-ttl">Feature</h2>
@@ -121,7 +123,7 @@
         <!-- DOUBLE SLIDER END -->
     </section>
     <section class="main__story page-inner line-block">
-        <div class="main__story-left txt-block">
+        <div class="main__story-left txt-block js_text-block" data-scroll data-scroll-class="visible">
             <h2 class="main__story-left-ttl">Story</h2>
             <h3 class="main__story-left-subttl">Why we&nbsp;do</h3>
             <div class="main__story-left-txt txt-content">
@@ -132,7 +134,7 @@
         </div>
         <div class="main__concept-right pic-rectangle-container">
             <img src="../dist/img/main/home-story-s.jpg" alt="rectangle" class="main__story-right-md pic-rectangle--md">
-            <img src="../dist/img/main/home-story-l.jpg" alt="rectangle" class="main__story-right-lg pic-rectangle--lg">
+            <img src="../dist/img/main/home-story-l.jpg" alt="rectangle" class="main__story-right-lg pic-rectangle--lg" data-scroll data-scroll-direction="horizontal"  data-scroll-speed="-1" data-scroll-repeat="true">
         </div>
     </section>   
 </div>

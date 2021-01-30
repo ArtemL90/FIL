@@ -95,3 +95,9 @@ $z-indexes: (
     "page-wrapper",
     "site-footer"
 );
+
+// animatoin mixins
+
+@mixin transX($elWidth) {
+    transform: translateX(calc(#{$elWidth} * 2));
+}

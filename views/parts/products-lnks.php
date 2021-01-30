@@ -6,7 +6,7 @@
             <div class="products-lnks__ttl-itm"></div>
             Products
         </h2>
-        <div class="swiper-container products-lnks__slider-container js_lnks-slider">
+        <div class="swiper-container products-lnks__slider-container js_lnks-slider" data-scroll data-scroll-class="visible">
             <div class="swiper-wrapper products-lnks__slider-wrapper">
                 <!-- Slides -->
                 <?php include "../../views/parts/product-cards/dining-chair.php" ?>

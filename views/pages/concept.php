@@ -1,11 +1,14 @@
 <!-- head, meta tags, css ..-->
 <?php include "../main-parts/top-part.php" ?>
 <!-- head, meta tags, css .. end-->
-<div class="concept page-outer js_container" data-page-name="concept" data-group-name="main" data-barba="container" data-barba-namespace="concept">
+<div class="concept page-outer js_container" data-scroll-section data-scroll data-page-name="concept" data-group-name="main" data-barba="container" data-barba-namespace="concept">
     <section class="concept__top section-main">
         <img src="../../dist/img/concept/concept-hero.jpg" alt="backgrd" class="concept__top-backgrd">
         <div class="concept__top-inner section-main__inner page-inner">
-            <h1 class="concept__top-ttl section-main__ttl">The meaning<br>of Tradition</h1>
+            <h1 class="concept__top-ttl section-main__ttl"><span>T</span><span>h</span><span>e</span>
+                <span>m</span><span>e</span><span>a</span><span>n</span><span>i</span><span>n</span><span>g</span><br>
+                <span>o</span><span>f</span>  
+                <span>T</span><span>r</span><span>a</span><span>d</span><span>i</span><span>t</span><span>i</span><span>o</span><span>n</span></h1>
             <div class="concept__top-itms section-main__itms">
                 <a href="#" class="concept__top-scroll lnk-effect js_scroll">Scroll</a>
             </div>
@@ -22,7 +25,7 @@
                     <div class="concept__info-ticker-txt">The Meaning</div>
                 </div>
             </div>
-            <img src="../../dist/img/concept/concept-intro.jpg" alt="rectangle" class="concept__info-pic pic-rectangle--sm">
+            <img src="../../dist/img/concept/concept-intro.jpg" alt="rectangle" class="concept__info-pic pic-rectangle--sm" data-scroll data-scroll-direction="horizontal"  data-scroll-speed="-2" data-scroll-repeat="true">
             <div class="concept__info-card info-card">
                 <div class="info-card__content">
                     <h2 class="concept__info-card-ttl">info concept</h2>
@@ -54,7 +57,7 @@
             </div>
         </div>
         <div class="concept__about-inner page-inner">
-            <div class="swiper-container double-slider-info info-card js_concept-double-slider-info">
+            <div class="swiper-container double-slider-info info-card js_concept-double-slider-info" data-scroll  data-scroll-speed="1" data-scroll-repeat="true">
                 <div class="swiper-wrapper double-slider-info__wrapper swiper-no-swiping">
                     <div class="swiper-slide double-slider-info__slide info-card__content">
                         <h2 class="double-slider-info__slide-ttl">about</h2>
@@ -97,7 +100,7 @@
     <section class="concept__team">
         <div class="concept__team-inner page-inner">
             <h2 class="concept__team-ttl">Our Team</h2>
-            <div class="concept__team-brands">
+            <div class="concept__team-brands js_brands" data-scroll  data-scroll-class="visible">
                 <div class="concept__team-brands-grp">
                     <img src="../../dist/img/team/team-miya.png" alt="barnd-icn" class="concept__team-brands-grp-icn">
                     <img src="../../dist/img/team/team-rinn.png" alt="barnd-icn" class="concept__team-brands-grp-icn">
@@ -111,7 +114,7 @@
                     <img src="../../dist/img/team/team-youbi.png" alt="barnd-icn" class="concept__team-brands-grp-icn">
                 </div>    
             </div>
-            <img src="../../dist/img/concept/concept-team.jpg" alt="backgrd" class="concept__team-backgrd">   
+            <img src="../../dist/img/concept/concept-team.jpg" alt="backgrd" class="concept__team-backgrd" data-scroll data-scroll-direction="horizontal"  data-scroll-speed="1" data-scroll-repeat="true">   
         </div>
     </section>
     <?php include "../../views/parts/products-lnks.php" ?>

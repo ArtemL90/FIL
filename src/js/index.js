@@ -9,4 +9,3 @@ import './modules/custom-cursor.js';
 import './modules/popup.js';
 import './modules/sendForm.js';
 
-const time = 1500;

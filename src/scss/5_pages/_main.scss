@@ -3,11 +3,14 @@
         color: $grey-color;
     }
     &__concept {
+        &-left {
+            @include transX(#{$md-rectangle-width});
+        }
         &-right {
             &-md {
                 left:-150px;
             }
-        }
+        } 
     }
     &__feature {
         width: 100%;
@@ -21,6 +24,9 @@
     }
     &__story {
         flex-direction: row-reverse; 
+        &-left {
+            @include transX(-#{$md-rectangle-width});
+        }
         &-right {
             &-md {
                 right:-150px;

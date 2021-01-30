@@ -48,6 +48,7 @@
   "dependencies": {
     "@barba/core": "^2.9.7",
     "jump.js": "^1.0.2",
+    "locomotive-scroll": "^4.0.6",
     "only-if-changed-webpack-plugin": "0.0.3",
     "sal.js": "^0.8.1",
     "swiper": "^6.3.2"

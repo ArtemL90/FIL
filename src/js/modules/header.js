@@ -1,4 +1,4 @@
-import { holdBody, pageTransInterval } from './animation.js';
+import { holdBody, pageTransInterval, locoScrollPlugin } from './animation.js';
 
 const containerEl = document.querySelector('body');
 const navEls = document.querySelectorAll('.js_nav-el');
@@ -7,8 +7,8 @@ const navBackgrs = document.querySelectorAll('.js_menu-backgr');
 const menuBtnEl = document.querySelector('.js_menu-btn');
 let page;
 
-containerEl.addEventListener('scroll', function() {
-    if(this.scrollTop > 0 ) {
+locoScrollPlugin.on('scroll', (e) => {
+    if(e.scroll.y > 0 ) {
         if(headerEl.classList.contains('header--scroll')) {
             return;
         }
@@ -30,7 +30,7 @@ function addActiveMenuBackgr() {
 }
 function shineNavLnk(){
     page = document.querySelector('.js_container').getAttribute('data-page-name');
-    for(let i=0;i<navEls.length; i++){
+    for(let i=0;i < navEls.length; i++){
         let newPage = navEls[i].getAttribute('data-page');
         let navElsParent = navEls[i].parentNode;
         navElsParent.children[i].classList.remove('active-nav-el');

@@ -1,7 +1,7 @@
 <!-- head, meta tags, css ..-->
 <?php include "../main-parts/top-part.php" ?>
 <!-- head, meta tags, css .. end-->
-<div class="products page-outer js_container" data-barba="container" data-page-name="products" data-barba-namespace="products">
+<div class="products page-outer js_container" data-scroll-section data-scroll data-barba="container" data-page-name="products" data-barba-namespace="products">
     <section class="products__top section-main">
         <img src="../../dist/img/products/products-hero.jpg" alt="backgrd" class="products__top-backgrd">
         <div class="products__top-inner section-main__inner page-inner">

@@ -91,7 +91,7 @@ function addCustomCursor() {
     lnkEls.forEach(lnkEl => {
         lnkEl.addEventListener('click', () => {
             if(!areaElFlag) {
-                hideCustomCursor(areaEl);
+                cursorEl.className = 'cursor circle-el js_cursor';
                 return areaElFlag = true;
             }
             return;

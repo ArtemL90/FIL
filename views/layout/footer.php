@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer data-scroll-section  class="footer js_footer" data-scroll data-scroll-class="visible" data-scroll-repeat>
     <div class="footer__inner page-inner">
         <div class="footer__part">
            <div class="footer__logo main-logo">fil</div>
