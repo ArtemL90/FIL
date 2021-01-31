@@ -1,5 +1,7 @@
 import {popupFormOuterEl, inputEls} from './popup'
+//import {containerEl, bodyEl, pageTransInterval } from './common.js';
 
+// send form (fetch)
 const popupFormEl = document.querySelector('.js_popup-request');
 
 async function handleFormSubmit(e) {

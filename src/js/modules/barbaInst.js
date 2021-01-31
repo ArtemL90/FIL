@@ -1,23 +1,23 @@
 import { addAllSliders } from './sliders.js';
 import { addCustomCursor } from './custom-cursor.js';
 import { shineNavLnk } from './header.js';
-import { pageTransInterval, addSmoothScroll, locoScrollPlugin, addTtlAnim } from './animation.js';
-//import sal from 'sal.js';
+import {addAnchorScroll, locoScrollPlugin, holdBody, addLocoEvents } from './animation.js';
+import { pageTransInterval } from './common.js';
 
 
 // init Barba.js plugin
 import barba from '@barba/core';
-const bodyEl = document.querySelector('html')
+
 const transitionEl = document.querySelector('.js_page-transition');
 // barba plugin options 
-
 barba.hooks.after(data => {
    let name = data.next.namespace; 
    addAllSliders();
    addCustomCursor();
    shineNavLnk();
-   addSmoothScroll();
+   addAnchorScroll();
    locoScrollPlugin.update();
+   addLocoEvents();
 });
 // delay func
 function delay(n) {
@@ -47,6 +47,7 @@ barba.init({
             'disableLerp': true,
             'callback': transitionEl.classList.add('is-loaded')
          });
+         
       }
    }]
 });

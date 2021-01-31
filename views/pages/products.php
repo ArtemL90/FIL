@@ -1,11 +1,11 @@
 <!-- head, meta tags, css ..-->
 <?php include "../main-parts/top-part.php" ?>
 <!-- head, meta tags, css .. end-->
-<div class="products page-outer js_container" data-scroll-section data-scroll data-barba="container" data-page-name="products" data-barba-namespace="products">
+<div class="products page-outer js_container" data-scroll-section data-scroll  data-barba="container" data-page-name="products" data-barba-namespace="products">
     <section class="products__top section-main">
         <img src="../../dist/img/products/products-hero.jpg" alt="backgrd" class="products__top-backgrd">
         <div class="products__top-inner section-main__inner page-inner">
-            <h1 class="products__top-ttl section-main__ttl">Products</h1>
+            <h1 class="products__top-ttl section-main__ttl" data-scroll data-scroll-direction="horizontal">Products</h1>
             <div class="products__top-itms section-main__itms">
                 <a href="#" class="products__top-scroll lnk-effect js_scroll">Scroll</a>
             </div>

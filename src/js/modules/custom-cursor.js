@@ -1,4 +1,4 @@
-// custom cursor 
+//import { containerEl, bodyEl, pageTransInterval } from './common.js';
 
 // set position 
 function setPosition(element, e) {
@@ -8,6 +8,7 @@ function setPosition(element, e) {
     element.style.top = `${y}px`;
 }
 
+// custom cursor 
 function addCustomCursor() {
     const areaEls = document.querySelectorAll('.js_swipe-area');
     const lnkEls = document.querySelectorAll('a');
@@ -31,12 +32,10 @@ function addCustomCursor() {
         return;
     };
     function  hideCustomCursor(parent) {
-        if(!cursorActiveFlag) {
-            cursorEl.className = 'cursor circle-el js_cursor';
-            cursorActiveFlag = true;
-            if(parent !== undefined) {
-                parent.style.cursor = 'auto';
-            }
+        cursorEl.className = 'cursor circle-el js_cursor';
+        cursorActiveFlag = true;
+        if(parent !== undefined) {
+            parent.style.cursor = 'auto';
         }
         return;
     }
@@ -51,8 +50,10 @@ function addCustomCursor() {
         });
         item.addEventListener('mouseout', () => {
            if(!areaElFlag) {
-               hideCustomCursor(areaEl);
-               return areaElFlag = true;
+               if(!cursorActiveFlag) {
+                   hideCustomCursor(areaEl);
+                   return areaElFlag = true;
+               }   
            }
            return;
         });
@@ -65,8 +66,7 @@ function addCustomCursor() {
             areaElFlag = false; 
        }else {
             if(!areaElFlag) {
-                containerEl.style.cursor = 'auto';
-                cursorEl.className = 'cursor circle-el js_cursor';
+                hideCustomCursor(areaEl);
                 areaElFlag = true;
             };
             cursorActiveFlag = true;
@@ -90,11 +90,8 @@ function addCustomCursor() {
     });
     lnkEls.forEach(lnkEl => {
         lnkEl.addEventListener('click', () => {
-            if(!areaElFlag) {
-                cursorEl.className = 'cursor circle-el js_cursor';
-                return areaElFlag = true;
-            }
-            return;
+            cursorEl.className = 'cursor circle-el js_cursor';
+            cursorActiveFlag = true;
         })
     });
 }

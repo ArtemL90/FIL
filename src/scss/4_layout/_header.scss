@@ -180,10 +180,31 @@
         z-index: 7;
         transition: .2s;
         cursor:pointer;
+        &::after {
+            @include pseudo;
+            right: -1px;left: -1px;
+            top:-1px;bottom: -1px;
+            border-radius: 100%;
+            border: 0.5px solid transparent;
+            border-left: 0.5px solid #{$base-text-color};
+            border-top: 0.5px solid #{$base-text-color};
+            animation: addRotate #{$anim-trans-time} infinite linear;
+            opacity: 0;
+            @keyframes addRotate {
+                0%{transform: rotate(-360deg);opacity: 1;}
+                25%{opacity: 0;}
+                50%{opacity: 0.5;}
+                75%{opacity: 0;}
+                100%{opacity: 0.5;}
+            }
+        }
         &:hover {
             transition: .4s;
             width: 56px;
             height: 56px;
+            &::after {
+                animation: none;
+            }
             .header__hamburg-line {
                 &-dote {
                     transition: 0.2s;

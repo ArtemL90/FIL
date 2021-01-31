@@ -1,11 +1,13 @@
-import { holdBody } from './animation.js';
-
+//import {containerEl, bodyEl, pageTransInterval} from './common.js';
+import { holdBody } from './animation.js'
+// popup form
 const buttonElements = document.querySelectorAll('.js_popup-btn');
 const closeElements = document.querySelectorAll('.js_close-btn');
 const popupFormOuterEl = document.querySelector('.js_popup-outer');
 const inputEls = document.querySelectorAll('.js_popup-input');
 const blurEl = document.querySelector('.js_blur');
 
+// open popup
 function addPopupClass(elementParent) {
     for(let element of elementParent) {
         element.addEventListener('click', (e) => {
@@ -24,7 +26,7 @@ function addPopupClass(elementParent) {
         });    
     }
 };
-
+// input anim
 for(let inputEl of inputEls) {
     inputEl.addEventListener('mouseleave',(e) => {
         inputEl.parentElement.classList.remove('popup-request__itm-outer--active')
@@ -43,6 +45,7 @@ for(let inputEl of inputEls) {
 addPopupClass(buttonElements);
 addPopupClass(closeElements)
 
+// close popup
 popupFormOuterEl.addEventListener('mouseup',function (e){ 
     if (e.target != this) {
          return;

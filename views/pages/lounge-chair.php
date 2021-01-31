@@ -1,7 +1,7 @@
 <!-- head, meta tags, css ..-->
 <?php include "../main-parts/top-part.php" ?>
 <!-- head, meta tags, css .. end-->
-<div class="product page-outer js_container"data-scroll-section data-page-name="lounge-chair" data-group-name="product" data-barba="container" data-barba-namespace="lounge-chair">
+<div class="product page-outer js_container" data-scroll-section data-page-name="lounge-chair" data-group-name="product" data-barba="container" data-barba-namespace="lounge-chair">
     <section class="product__top section-main">
         <img src="../../dist/img/products/products-hero.jpg" alt="backgrd" class="product__top-backgrd">
         <div class="product__top-ttl-outer page-inner">
@@ -27,7 +27,7 @@
                     <div class="product__info-ticker-txt">Lounge</div>
                 </div>
             </div>
-            <img src="../../dist/img/product page/s2-intro.jpg" alt="rectangle" class="product__info-pic pic-rectangle--sm" data-scroll data-scroll-direction="horizontal"  data-scroll-speed="-2" data-scroll-repeat="true">
+            <img src="../../dist/img/product page/s2-intro.jpg" alt="rectangle" class="product__info-pic pic-rectangle--sm" data-scroll data-scroll-direction="horizontal"  data-scroll-speed="-2" data-scroll-repeat="true" >
             <div class="product__info-card info-card">
                 <div class="info-card__content">
                     <h2 class="product__info-card-ttl">Details</h2>

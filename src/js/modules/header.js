@@ -1,12 +1,14 @@
-import { holdBody, pageTransInterval, locoScrollPlugin } from './animation.js';
+import { locoScrollPlugin, holdBody } from './animation.js';
+//import {containerEl, bodyEl, pageTransInterval} from './common.js';
 
-const containerEl = document.querySelector('body');
+// header
 const navEls = document.querySelectorAll('.js_nav-el');
 const headerEl = document.querySelector('.js_header');
 const navBackgrs = document.querySelectorAll('.js_menu-backgr');
 const menuBtnEl = document.querySelector('.js_menu-btn');
 let page;
 
+// add scroll class to header with loco scroll plugin
 locoScrollPlugin.on('scroll', (e) => {
     if(e.scroll.y > 0 ) {
         if(headerEl.classList.contains('header--scroll')) {
@@ -18,6 +20,7 @@ locoScrollPlugin.on('scroll', (e) => {
     };
 });
 
+// popup menu
 function addActiveMenuBackgr() {
     for(let i=0;i<navBackgrs.length; i++){
         let newPage = navBackgrs[i].getAttribute('data-page');
@@ -28,6 +31,7 @@ function addActiveMenuBackgr() {
         };
     };
 }
+// shine lnk 
 function shineNavLnk(){
     page = document.querySelector('.js_container').getAttribute('data-page-name');
     for(let i=0;i < navEls.length; i++){
@@ -41,16 +45,7 @@ function shineNavLnk(){
     addActiveMenuBackgr();
 };
 shineNavLnk();
-
-document.addEventListener('scroll', () => {
-    if(window.pageYOffset > 0) {
-        headerEl.classList.add('header--scroll');
-    }
-    if(window.pageYOffset == 0) {
-         headerEl.classList.remove('header--scroll');
-    };
-});
-
+// open hidden nav menu
 menuBtnEl.addEventListener('click', () => {
     holdBody();
     if(headerEl.classList.contains('header--active')) {
@@ -62,8 +57,7 @@ menuBtnEl.addEventListener('click', () => {
     };
 });
 
-
-
+// add background hover nav
 navEls.forEach(navEl => {
     navEl.addEventListener('mouseenter', (e) => {
         if(headerEl.classList.contains('header--active')) {
@@ -85,7 +79,5 @@ navEls.forEach(navEl => {
         };
     })
 });
-
-
 
 export{ shineNavLnk };

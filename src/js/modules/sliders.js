@@ -1,8 +1,8 @@
-// init Swiper Plugin
-import Swiper from 'swiper/bundle';
+//import { containerEl, bodyEl, pageTransInterval } from './common.js';
 
 // init sliders
-
+// init Swiper Plugin
+import Swiper from 'swiper/bundle';
 // add slide index
 function showSlideIndex(sliderName, indxEl) {
   let slideIndxEl = indxEl;
