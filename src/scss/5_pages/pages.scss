@@ -118,14 +118,13 @@ html,body {
   &__top {
     &-backgrd {
         position: absolute;
-        height: 100%;
+        height: calc(var(--vh, 1vh) * 100); // height for full display
         width: 100%;
         overflow: hidden;
         &-img {
           height: 130%;
           width: 100%;
           object-fit: cover;
-          margin-top: -5%;
         }
     }
     &-inner {
@@ -274,7 +273,7 @@ html,body {
 .concept, .story {
   &__about {
     width: 100%;
-    height: calc(var(--vh, 1vh) * 100); // height for full display
+    height: $section-height;
     position: relative;
     @include section-idents;
     &-inner {

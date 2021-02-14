@@ -64,19 +64,19 @@
             </div>
         </div>
     </section>
-    <section class="product__gallery">
+    <section class="product__gallery"  data-scroll  data-scroll-speed="1" data-scroll-repeat="true">
         <div class="product__gallery-inner page-inner">
             <!-- GALLERY SLIDER -->
             <div  class="swiper-container gallery-slider  js_lounge-chair-gallery-slider ">
                 <div data-text="next" class="swipe-area swiper-wrapper gallery-slider__wrapper js_swipe-area">
                     <div class="swiper-slide gallery-slider__slide">
-                        <img src="../../dist/img/product page/s2-slide-1.jpg" alt="gallery-img" class="gallery-slider__slide-content" data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
+                        <img src="../../dist/img/product page/s2-slide-1.jpg" alt="gallery-img" class="gallery-slider__slide-content">
                     </div>
                     <div class="swiper-slide gallery-slider__slide">
-                        <img src="../../dist/img/product page/s2-slide-2.jpg" alt="gallery-img" class="gallery-slider__slide-content" data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
+                        <img src="../../dist/img/product page/s2-slide-2.jpg" alt="gallery-img" class="gallery-slider__slide-content">
                     </div>
                     <div class="swiper-slide gallery-slider__slide">
-                        <img src="../../dist/img/product page/s2-slide-3.jpg" alt="gallery-img" class="gallery-slider__slide-content" data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
+                        <img src="../../dist/img/product page/s2-slide-3.jpg" alt="gallery-img" class="gallery-slider__slide-content">
                     </div>
                 </div>
                 <div class="gallery-slider__itms">

@@ -107,22 +107,18 @@
 }
 
 .gallery-slider {
-    width: 100%;
-    overflow: hidden;
     &__slide {
         height: $section-height;
-        overflow: hidden;
+        @include mq('tablet') {
+            height: calc(#{$section-height} / 2);
+        }
+        @include mq('tablet-small') {
+         height: 300px;
+        }
         &-content {
            width: 100%;
-           height: 130%;
-           margin-top: -10%;
+           height: 100%;
            object-fit: cover; 
-           @include mq('tablet') {
-               height: calc(#{$section-height} / 2);
-           }
-           @include mq('tablet-small') {
-            height: 300px;
-           }
         }
     }
     &__itms {

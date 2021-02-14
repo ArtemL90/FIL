@@ -60,7 +60,7 @@
         </div>
         <div class="concept__about-inner page-inner">
             <div class="swiper-container double-slider-info info-card js_concept-double-slider-info">
-                <div class="swiper-wrapper double-slider-info__wrapper swiper-no-swiping"  data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
+                <div class="swiper-wrapper double-slider-info__wrapper swiper-no-swiping">
                     <div class="swiper-slide double-slider-info__slide info-card__content">
                         <h2 class="double-slider-info__slide-ttl">about FIL</h2>
                         <h3 class="double-slider-info__slide-subttl">Who we are</h3>
