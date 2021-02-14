@@ -6,7 +6,11 @@ const locoScrollPlugin = new LocomotiveScroll({
   el: document.querySelector('[data-scroll-container]'),
   smooth: true,
   getDirection: true,
-  reloadOnContextChange: true
+  reloadOnContextChange: true,
+  smartphone: {
+    smooth: true,
+  }
+  
 });
 
 // events loco plugin
