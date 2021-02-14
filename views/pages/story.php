@@ -3,12 +3,14 @@
 <!-- head, meta tags, css .. end-->
 <div class="story page-outer js_container" data-scroll-section data-scroll  data-page-name="story" data-group-name="page" data-barba="container" data-barba-namespace="story">
     <section class="story__top section-main">
-        <img src="../../dist/img/main/home-hero-3.jpg" alt="backgrd" class="story__top-backgrd">
+        <div class="story__top-backgrd">
+            <img src="../../dist/img/main/home-hero-3.jpg" alt="backgrd" class="story__top-backgrd-img"  data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
+        </div>
         <div class="story__top-inner section-main__inner page-inner">
             <h1 class="story__top-ttl section-main__ttl">
                 <span>W</span><span>h</span><span>y</span> <span>w</span><span>e</span> <span>d</span><span>o</span></h1>
             <div class="story__top-itms section-main__itms">
-                <a href="#" class="story__top-scroll lnk-effect js_scroll">Scroll</a>
+                <a href="#" class="story__top-scroll scroll-btn lnk-effect js_scroll">Scroll</a>
             </div>
         </div>
         <div class="blur-line"></div>
@@ -27,13 +29,13 @@
             <div class="story__info-card info-card">
                 <div class="info-card__content">
                     <h2 class="story__info-card-ttl">Our story</h2>
-                    <h3 class="story__info-card-subttl">"The<br> Meaning<br> of&nbsp;Tradition"</h3>
+                    <h3 class="story__info-card-subttl">"Fulfilling Life"</h3>
                     <div class="story__info-card-txt txt-content">
-                        What does it mean to live with nature? MASS Series “SUMI LIMITED” 
-                        was designed to bring awareness and understanding about Noyaki. 
-                        Noyaki is a unique millennium old tradition that created the stunning landscape of Aso. 
-                        The long and challenging tradition has brought people together and deepened the relationship. 
-                        Recalling the history behind the landscape might give us a hint to “a fulfilling life.”
+                        Based on the concept of “Fulfilling life”, FIL applies their vision to the products 
+                        by protecting and preserving the beautiful landscape and tradition of the Aso/Minami-Oguni region. 
+                        FIL also values a profound relationship between nature and humans. 
+                        It is their hope that the society inquires “what it means to have a fulfilling life.” 
+                        FIL aims to appeal the values and importance of lifestyle co-living with nature.
                     </div>
                 </div>    
             </div>
@@ -44,46 +46,48 @@
                  <div data-text="next" class="swiper-container swipe-area double-slider-bg js_story-double-slider-bg js_swipe-area">
             <div class="swiper-wrapper double-slider-bg__wrapper">
                 <div class="swiper-slide">
-                    <img src="../../dist/img/story/story-slide-1.jpg" alt="about-slide-pic" class="swiper-slide-pic">
+                    <img src="../../dist/img/story/story-slide-1.jpg" alt="about-slide-pic" class="swiper-slide-pic"  data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
                 </div>
                 <div class="swiper-slide">
-                    <img src="../../dist/img/story/story-slide-2.jpg" alt="about-slide-pic" class="swiper-slide-pic">
+                    <img src="../../dist/img/story/story-slide-2.jpg" alt="about-slide-pic" class="swiper-slide-pic"  data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
                 </div>
                 <div class="swiper-slide">
-                    <img src="../../dist/img/story/story-slide-3.jpg" alt="about-slide-pic" class="swiper-slide-pic">
+                    <img src="../../dist/img/story/story-slide-3.jpg" alt="about-slide-pic" class="swiper-slide-pic"  data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
                 </div>
             </div>
         </div>
         <div class="story__about-inner page-inner">
             <div class="swiper-container double-slider-info info-card js_story-double-slider-info" data-scroll  data-scroll-speed="1" data-scroll-repeat="true">
-                <div class="swiper-wrapper double-slider-info__wrapper swiper-no-swiping">
+                <div class="swiper-wrapper double-slider-info__wrapper swiper-no-swiping"  data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
                     <div class="swiper-slide double-slider-info__slide info-card__content">
-                        <h2 class="double-slider-info__slide-ttl">about</h2>
-                        <h3 class="double-slider-info__slide-subttl">Charred inky black represents the&nbsp;culture </h3>
+                        <h2 class="double-slider-info__slide-ttl">About Noyaki</h2>
+                        <h3 class="double-slider-info__slide-subttl">The landscape of&nbsp;Aso</h3>
                         <div class="double-slider-info__slide-txt txt-content">
-                            Cedar is charred to gain glossiness and organic about with defined grains.  
-                            Charred colour reminds us of Noyaki. 
-                            It represents Aso's history and beauty of harmonic lifestyle with nature.
+                            Noyaki is a millennium old tradition in Aso to preserve the grasslands. 
+                            The landscape of Aso grasslands is a symbol of the human relationship with nature. 
+                            Locals have been maintaining and using the grasslands to undertake sustainable farming 
+                            and agriculture in volcanic lands.
                         </div>
                     </div>
                     <div class="swiper-slide double-slider-info__slide info-card__content">
-                        <h2 class="double-slider-info__slide-ttl">about</h2>
-                        <h3 class="double-slider-info__slide-subttl">Charred inky black represents the&nbsp;culture </h3>
+                        <h2 class="double-slider-info__slide-ttl">About Noyaki</h2>
+                        <h3 class="double-slider-info__slide-subttl">Nature and humans</h3>
                         <div class="double-slider-info__slide-txt txt-content">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            Without Noyaki, Aso grasslands would become overgrown with bushes and 
+                            the biodiversity native to Aso will be at risk. Noyaki exterminates destructive 
+                            insects and helps new shoots on their upward journey above ground. 
+                            Aso’s stunning landscape and rich habitats exist in partnership between humans and nature."
                         </div>
                     </div>
                     <div class="swiper-slide double-slider-info__slide info-card__content">
-                        <h2 class="double-slider-info__slide-ttl">about</h2>
-                        <h3 class="double-slider-info__slide-subttl">Che NAHUY????</h3>
+                        <h2 class="double-slider-info__slide-ttl">About Noyaki</h2>
+                        <h3 class="double-slider-info__slide-subttl">A profound relationship</h3>
                         <div class="double-slider-info__slide-txt txt-content">
-                            Cedar is charred to gain glossiness and organic about with defined grains.  
-                            Charred colour reminds us of Noyaki. 
-                            It represents Aso's history and beauty of harmonic lifestyle with nature.
+                            Noyaki takes place here in Minami-Oguni town, where FIL is based and with the 
+                            FIL staff partaking. We feel it is important to experience the tradition and 
+                            continue to reflect on what it means to live with nature. 
+                            We also value fostering relationships with local communities and commit to 
+                            treasure this nature for our next generation and thereafter.
                         </div>
                     </div>
                 </div>

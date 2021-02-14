@@ -4,6 +4,12 @@
         &-inner {
             position: relative;
             padding-bottom: calc(#{$md-rectangle-width} + 50px);
+            @include mq('tablet-wide') {
+                padding-bottom: calc(#{$md-rectangle-width} + 80px);
+            }
+            @include mq('tablet-small') {
+                padding-bottom: calc(#{$md-rectangle-width / 1.5};
+            }
         }
         &-ttl {
             font-family: ShreeDev0714;
@@ -11,6 +17,9 @@
             font-weight: 400;
             letter-spacing: 2.7px;
             margin-bottom: 80px;
+            @include mq('tablet-small') {
+                margin-bottom: 30px;
+            }
             color: $base-text-color;
         }
         &-brands {
@@ -26,6 +35,9 @@
                 transition: ease-in-out #{$anim-trans-time};
                 opacity: 1;
             }
+            @include mq('tablet-small') {
+                flex-direction: column;
+            }
             &-grp {
                 width: auto;
                 display: flex;
@@ -36,6 +48,14 @@
                     width: $md-rectangle-width;
                     height: calc(#{$md-rectangle-width} / 2);
                     object-fit: cover;
+                    @include mq('tablet-wide') {
+                        width: calc(#{$md-rectangle-width} / 1.5);
+                        height: calc(#{$md-rectangle-width} / 2.5);
+                    }
+                    @include mq('tablet-small') {
+                        width: $md-rectangle-width;
+                        height: calc(#{$md-rectangle-width} / 2);
+                    }
                 }
             }
         }
@@ -46,6 +66,11 @@
             bottom: 0;
             width: calc(100% + (#{$left-itm-ident} * -1) - 20px);
             left: $left-itm-ident;
+            @include mq('tablet-small') {
+                width: 100%;
+                left: 0;
+                height: 250px;
+            }
         }
     }
 }

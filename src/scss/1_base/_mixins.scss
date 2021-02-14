@@ -11,39 +11,12 @@
 
 // idents between sections
 @mixin section-idents {
-    margin-top:200px;
+    margin-top: 200px;
+    @include mq('tablet-small') {
+        margin-top: 170px;
+    }
 }
 
-@mixin _1170 {
-    @media (max-width: 1170px){
-        @content;
-    }
-}
-@mixin _979 {
-    @media (max-width: 979px){
-        @content;
-    }
-}
-@mixin _768 {
-    @media (max-width: 768px){
-        @content;
-    }
-}
-@mixin _640 {
-    @media (max-width: 640px){
-        @content;
-    }
-}
-@mixin _480 {
-    @media (max-width: 480px){
-        @content;
-    }
-}
-@mixin _380{
-    @media (max-width: 380px){
-        @content;
-    }
-}
 
 // pseudo element mixin
 
@@ -66,7 +39,7 @@ $breakpoints: (
     "desktop":      1248px,
     "desktop-wide": 1440px
 );
-@mixin mq($width, $type: min) {
+@mixin mq($width, $type: max) {
     @if map_has_key($breakpoints, $width) {
         $width: map_get($breakpoints, $width);
         @if $type == max {
@@ -98,6 +71,14 @@ $z-indexes: (
 
 // animatoin mixins
 
-@mixin transX($elWidth) {
-    transform: translateX(calc(#{$elWidth} * 2));
+@mixin transX($el-width) {
+    transform: translateX(calc(#{$el-width} * 2));
+}
+
+// font size
+$maxWidth: 1280;
+@mixin adapted-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }

@@ -3,10 +3,11 @@
 
 // tittles & text
 h1 {
-  font-size: 66px;
+  //font-size: 66px;
   color: $base-text-color;
   font-family: ShreeDev0714;
   font-weight: 400;
+  @include adapted-font(66, 56);
 }
 h2 {
   color: $grey-color;
@@ -33,7 +34,6 @@ h3 {
   position: relative;
 }
 .pic-rectangle {
-  object-fit: cover;
   display: block;
   &--sm {
     width: $sm-rectangle-width;
@@ -46,10 +46,21 @@ h3 {
     top:50%;
     transform: translate(0, -50%);
     z-index: 1;
+    @include mq('tablet-small') {
+      width: $md-rectangle-width--phone;
+      height: $md-rectangle-height--phone;
+    }
   }
   &--lg {
-    width: $xl-rectangle-width;
+    width: calc(100% - #{$md-rectangle-width-half});
     height: $lg-rectangle-height;
+    @include mq('tablet-small') {
+      width: calc(100% - #{$md-rectangle-width-half--phone});
+      height: $lg-rectangle-height--phone;
+    }
+  }
+  &--lg, &--md, &--sm {
+    object-fit: cover;
   }
 }
 .line-lnk {
@@ -118,8 +129,16 @@ h3 {
     }
   } 
 }
+.scroll-btn {
+  @include mq('tablet') {
+    display: none;
+  }
+}
 .txt-block {
   max-width: $text-block-width;
+  @include mq('tablet-wide') {
+    max-width: calc(#{$text-block-width} * 2);
+  }
 }
 .product-card {
   &[data-swiper-slide-index='1'] {
@@ -150,6 +169,7 @@ h3 {
     justify-content: space-between;
     position: relative;
     cursor: none;
+    margin-right: 0!important;
     &:hover {
       .product-card__lnk-pic {
         transition: $text-hover-trans;
@@ -190,6 +210,9 @@ h3 {
   height: $lg-rectangle-height;
   position: absolute;
   right:20px;
+  @include mq('tablet-small') {
+    width: $lg-rectangle-width--phone;
+  }
   &__content {
     height: 100%;
     width: 100%;
@@ -256,6 +279,9 @@ h3 {
     from {font-size: 0;} 
     to { font-size: $base-font-size;} 
   };
+  @include mq('tablet-wide') {
+    display: none;
+  }
 } 
 
 .preloader {

@@ -16,12 +16,19 @@ function addDoubleSlider(pageNameStr) {
   let sliderTxt= new Swiper('.js_' + pageNameStr + '-double-slider-info', {
     loop: true,
     effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     noSwipingClass: 'swiper-no-swiping',
   });
 
   let sliderBg = new Swiper('.js_' + pageNameStr + '-double-slider-bg', {
     loop: true,
     effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    speed: 1000,
     touchStartPreventDefault: false,    
     pagination: {
       el: '.js_' + pageNameStr + '-double-slider-pagination',
@@ -39,10 +46,17 @@ function addDoubleSlider(pageNameStr) {
 function addLinksSlider()  {
   let  lnksSlider = new Swiper('.js_lnks-slider', {
     // Optional parameters
-    slidesPerView: 6,
+    slidesPerView: 6.5,
     touchStartPreventDefault: false,
-    spaceBetween: 40,
+    spaceBetween: 20,
     loop: true,
+    speed: 1000,
+    breakpoints: {
+      640: {
+        spaceBetween: 15,
+        slidesPerView: 6,
+      }
+    }
   });
 }
 
@@ -53,6 +67,7 @@ function addMainSliders(pageName) {
       // Optional parameters
       loop: true,
       effect: 'fade',
+      speed: 1000,
       touchStartPreventDefault: false,
       navigation: {
         nextEl: '.js_main-slider-next',
@@ -62,6 +77,9 @@ function addMainSliders(pageName) {
         el: '.js_main-slider-pagination',
         clickable: true,
       },
+      autoplay: {
+        delay: 7000,
+      }
   });
 
   addLinksSlider();
@@ -73,6 +91,7 @@ function addMainSliders(pageName) {
 function addGallerySlider(pageNameStr) {
   let gallerySlider = new Swiper('.js_' + pageNameStr + '-gallery-slider', {
     loop: true,
+    speed: 1000,
     touchStartPreventDefault: false,
     effect: 'fade',
     pagination: {

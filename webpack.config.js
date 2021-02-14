@@ -75,6 +75,25 @@ module.exports = {
                     
                 ]
             },
+            // image
+            {
+                test: /\.(png|gif|jpe?g)$/,
+                loaders: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            bypassOnDebug: true,
+                            name: '[path][name].[ext]',
+                        }
+                    },
+                    'img-loader',
+                ]
+            },
+            // svg
+            {
+                test: /\.svg$/,
+                loaders: ['cache-loader', 'svg-url-loader'],
+            },
             // php 
             {
                 test: /\.php$/,

@@ -13,6 +13,9 @@
             top:auto;
             transform: none;
             margin: 0;
+            @include mq('tablet') {
+                left:0;
+            }
             &-outer {
                 display: flex;
                 flex-direction: column;
@@ -33,6 +36,9 @@
         &-btn {
             background-color: $base-text-color;
             color: $dark-color;
+            @include mq('tablet') {
+                margin:0 auto;
+            }
         }
     }
     &__info {

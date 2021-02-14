@@ -4,13 +4,13 @@
 <div class="product page-outer js_container" data-scroll-section data-page-name="lounge-chair" data-group-name="product" data-barba="container" data-barba-namespace="lounge-chair">
     <section class="product__top section-main">
         <div class="product__top-backgrd">
-            <img src="../../dist/img/products/products-hero.jpg" alt="backgrd" class="product__top-backgrd-img"  data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
+            <img src="../../dist/img/products/products-hero.jpg" alt="backgrd" class="product__top-backgrd-img" data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
         </div>
         <div class="product__top-ttl-outer page-inner">
-            <h1 class="product__top-ttl section-main__ttl">MASS Series<br>Lounge Chair</h1>
+            <h1 class="product__top-ttl section-main__ttl">MASS Series<br>Dining Chair</h1>
         </div>
         <div class="product__top-inner section-main__inner page-inner">
-            <div class="product__top-subttl"><b>2010 $</b> + tax</div>
+            <div class="product__top-subttl"><b>1800 $</b> + tax</div>
             <div class="product__top-itms section-main__itms">
                 <a href="#" class="product__top-btn circle-btn circle-el js_popup-btn">
                     <span class="circle-btn__txt">Buy</span>
@@ -23,21 +23,21 @@
         <div class="product__info-inner page-inner">
             <div class="product__info-ticker">
                 <div class="product__info-ticker-inner">
-                    <div class="product__info-ticker-txt">Lounge</div>
+                    <div class="product__info-ticker-txt">Dining</div>
                 </div>
                 <div class="product__info-ticker-inner">
-                    <div class="product__info-ticker-txt">Lounge</div>
+                    <div class="product__info-ticker-txt">Dining</div>
                 </div>
             </div>
             <img src="../../dist/img/product page/s2-intro.jpg" alt="rectangle" class="product__info-pic pic-rectangle--sm" data-scroll data-scroll-direction="horizontal"  data-scroll-speed="-2" data-scroll-repeat="true" >
             <div class="product__info-card info-card">
                 <div class="info-card__content">
                     <h2 class="product__info-card-ttl">Details</h2>
-                    <h3 class="product__info-card-subttl">MASS Series<br>Lounge Chair</h3>
+                    <h3 class="product__info-card-subttl">MASS Series<br>Dining Chair</h3>
                     <div class="product__info-card-txt txt-content">
                         <div class="product__info-card-txt-part">
-                            <b>Special edition of lounge chair made of charred solid Oguni cedar. 
-                               Year of production and edition number are provided.
+                            <b>Special edition of dinning chair made of charred solid Oguni cedar. 
+                            Year of production and edition number are provided.
                             </b> 
                         </div>
                         <ul class="product__info-card-txt-part">
@@ -45,7 +45,7 @@
                                 <b>Fabrics:</b> Maharam 005 Talus
                             </li>
                             <li class="product__info-card-txt-part-ln">
-                                <b>Size:</b> W605 D680 H530 SH365 AH510
+                                <b>Size:</b> W590 D670 SH420 AH610
                             </li>
                             <li class="product__info-card-txt-part-ln">
                                 <b>Frame:</b> Steel with melamine resin finish

@@ -3,13 +3,28 @@
     @include section-idents;
     height: $section-height;
     position: relative;
+    padding-bottom: 40px;
+    @include mq('tablet-small') {
+        height: auto;
+    }
     &__texture {
         width: 400px;
         height: 100%;
-        object-fit: cover;
         position: absolute;
-        display: block;
         left: $left-itm-ident;
+        overflow: hidden;
+        @include mq('tablet-small') {
+            width: 280px;
+            height: 250px;
+            left: 0;
+            top:-40px;
+        }
+        &-backgrd {
+            width: 100%;
+            height: 130%;
+            margin-top: -30%;
+            object-fit: cover;
+        }
     }
     &__inner {
         position: relative;
@@ -18,6 +33,10 @@
         justify-content: space-between;
         align-items: center;
         overflow-x: visible;
+        @include mq('tablet-small') {
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
     }
     &__ttl {
         transform: rotate(-90deg);
@@ -25,6 +44,12 @@
         align-items: center;
         width: 140px;
         margin-left: -60px;
+        @include mq('tablet-small') {
+           transform: rotate(0deg);
+           margin-left: 0;
+           position: absolute;
+           top:0px;
+        }
         mark {
             background-color: transparent;
             color: $base-text-color;

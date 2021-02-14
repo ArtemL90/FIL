@@ -10,6 +10,9 @@ function setPosition(element, e) {
 
 // custom cursor 
 function addCustomCursor() {
+    if(window.screen.width <= 1024) {
+        return;
+    };
     const areaEls = document.querySelectorAll('.js_swipe-area');
     const lnkEls = document.querySelectorAll('a');
     const cursorEl = document.querySelector('.js_cursor');
@@ -90,10 +93,14 @@ function addCustomCursor() {
     });
     lnkEls.forEach(lnkEl => {
         lnkEl.addEventListener('click', () => {
-            cursorEl.className = 'cursor circle-el js_cursor';
-            cursorActiveFlag = true;
+            if(!areaElFlag) {
+                hideCustomCursor(areaEl)
+                return areaElFlag = true;
+            }
+            return;
         })
     });
 }
 addCustomCursor();
+
 export { addCustomCursor };

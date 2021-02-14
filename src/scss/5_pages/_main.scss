@@ -1,14 +1,36 @@
 .main {
+    &__top {
+        img {
+            height: 130%;
+            margin-top: -5%;
+        }
+    }
     &__top-itms-date {
         color: $grey-color;
+    }
+    .line-block {
+        &__right {
+            width: calc(#{$xl-rectangle-width} + #{$md-rectangle-width-half});
+            display: flex;
+            @include mq('tablet-wide') {
+                margin:0;
+                margin-top: 30px;
+                width: 100%;
+            }
+        }
     }
     &__concept {
         &-left {
             @include transX(#{$md-rectangle-width});
+            @include mq('tablet-wide') {
+                @include transX(-#{$md-rectangle-width});
+            }
         }
         &-right {
+            justify-content: flex-end;
+            margin-left: 20px;
             &-md {
-                left:-150px;
+                left: 0;
             }
         } 
     }
@@ -23,13 +45,17 @@
         }
     }
     &__story {
-        flex-direction: row-reverse; 
+        flex-direction: row-reverse;
+        @include mq('tablet-wide') {
+            flex-direction: column;
+        }
         &-left {
             @include transX(-#{$md-rectangle-width});
         }
         &-right {
+            margin-right: 20px;
             &-md {
-                right:-150px;
+                right: 0;
             }
         }
     }
