@@ -226,14 +226,14 @@ h3 {
 }
 
 .blur-line {
-  height: 0px;
+  height: 1px;
   position: absolute;
   left: -100px;right: -100px;
   background-color: $dark-color;
   box-shadow: 0px 0px 65px 65px rgba(0,0,0,1);
   -webkit-appearance: none;
   border-radius: 1px;
-  z-index: 5;
+  z-index: 2;
 }
 
 
