@@ -13,7 +13,7 @@
                 <a href="#" class="story__top-scroll scroll-btn lnk-effect js_scroll">Scroll</a>
             </div>
         </div>
-        <div class="blur-line"></div>
+        <div class="el-shadow"></div>
     </section>
     <section class="story__info js_scroll-section">
         <div class="story__info-inner page-inner">

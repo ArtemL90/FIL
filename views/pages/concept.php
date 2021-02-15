@@ -15,7 +15,7 @@
                 <a href="#" class="concept__top-scroll lnk-effect scroll-btn js_scroll">Scroll</a>
             </div>
         </div>
-        <div class="blur-line"></div>
+        <div class="el-shadow"></div>
     </section>
     <section class="concept__info js_scroll-section">
         <div class="concept__info-inner page-inner">

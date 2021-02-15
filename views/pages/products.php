@@ -10,7 +10,7 @@
                 <a href="#" class="products__top-scroll scroll-btn lnk-effect js_scroll">Scroll</a>
             </div>
         </div>
-        <div class="blur-line"></div>
+        <div class="el-shadow"></div>
     </section>
     <section class="products__lnks page-inner js_scroll-section">
         <div class="products__lnks-inner">

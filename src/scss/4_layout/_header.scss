@@ -9,17 +9,10 @@
     &--scroll {
         transition: .7s;
         padding-top: 15px;
-        .blur-line {
-            transition: .7s;
-            box-shadow: 0px 0px 45px 85px #{$dark-color};
-        }
     }
     &--active {
         height: calc(var(--vh, 1vh) * 100); // height for full display
         overflow: hidden;
-        .blur-line {
-            height: 95%;
-        }
         .header__backgr {
             &-container {
                 height: 80%;
@@ -165,8 +158,8 @@
             }
         }
     }
-    .blur-line {
-        transition: 0.7s;
+    .el-shadow {
+        top: 10px;
     }
     &__inner {
         display: flex;

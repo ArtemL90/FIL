@@ -25,7 +25,7 @@
                 <div class="main__top-itms-date">24/07/2020</div>
             </div>
         </div>
-        <div class="blur-line"></div>
+        <div class="el-shadow"></div>
     </section>
     <section class="main__concept page-inner line-block js_scroll-section">
         <div id="left-text-el" class="line-block__left main__concept-left txt-block js_text-block" data-scroll data-scroll-class="visible">

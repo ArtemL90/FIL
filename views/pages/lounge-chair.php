@@ -17,7 +17,7 @@
                 </a>   
             </div>
         </div>
-        <div class="blur-line"></div>
+        <div class="el-shadow"></div>
     </section>
     <section class="product__info">
         <div class="product__info-inner page-inner">

@@ -1,5 +1,5 @@
 <header  class="header  js_header">
-    <div class="blur-line js_blur"></div>
+    <div class="el-shadow"></div>
     <div class="header__backgr-container">
         <div class="header__backgr-outer">
             <img data-page="main" src="../../dist/img/main/home-hero-1.jpg" alt="header-backgr" class="header__backgr js_menu-backgr">

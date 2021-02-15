@@ -56,13 +56,13 @@ html,body {
 
 .section-main {
   width: 100%;
-  height: calc(var(--vh, 1vh) * 95); // height for full display
+  height: calc(var(--vh, 1vh) * 100); // height for full display
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  .blur-line {
-    bottom: 0;
+  .el-shadow {
+    bottom: -150px;
   }
   &__ttl {
       text-align: right;
