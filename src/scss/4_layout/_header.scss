@@ -112,7 +112,7 @@
                     }
                 }
             }
-            &:hover {
+            /*&:hover {
                 @include mq('tablet-wide', min) {
                     .header__hamburg-line {
                         &:nth-child(1) {
@@ -137,6 +137,9 @@
                         &:nth-child(2) {
                             position: relative;
                             margin-top: 6px;
+                            @include mq('tablet-wide') {
+                                margin-top: 4px;
+                            }
                         .header__hamburg-line-dote {
                             &:nth-child(odd) {
                                width: 8px;
@@ -162,7 +165,7 @@
                         }
                     }
                 }
-            }
+            }*/
         }
     }
     &__inner {
@@ -213,6 +216,28 @@
                 100%{opacity: 0.5;}
             }
         }
+        &-line {
+            display: flex;
+            &:nth-child(2) {
+                margin:4px 0;
+            }
+            &:nth-child(4) {
+                display: none;
+                margin-top: 6px;
+                
+            }
+            &-dote {
+                width: 2px;
+                height: 2px;
+                background-color: $base-text-color;
+                &:nth-child(2) {
+                    margin:0 4px;
+                }
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+        }
         &:hover {
             @include mq('tablet-wide', min) {
                 transition: .4s;
@@ -221,7 +246,7 @@
                 &::after {
                     animation: none;
                 }
-                .header__hamburg-line {
+                /*.header__hamburg-line {
                     &-dote {
                         transition: 0.2s;
                     }
@@ -260,31 +285,7 @@
                             }    
                         }
                     }
-                }
-            }
-        }
-        &-line {
-            display: flex;
-            &:nth-child(2) {
-                margin:4px 0;
-            }
-            &:nth-child(4) {
-                display: none;
-                margin-top: 6px;
-                @include mq('tablet-wide') {
-                    margin-top: 4px;
-                }
-            }
-            &-dote {
-                width: 2px;
-                height: 2px;
-                background-color: $base-text-color;
-                &:nth-child(2) {
-                    margin:0 4px;
-                }
-                &:nth-child(4) {
-                    display: none;
-                }
+                }*/
             }
         }
     }
