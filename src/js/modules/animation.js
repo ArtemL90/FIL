@@ -8,10 +8,12 @@ const locoScrollPlugin = new LocomotiveScroll({
   getDirection: true,
   reloadOnContextChange: true,
   tablet: {
-    smooth: false
+    smooth: true,
+    touchMultiplier: 5
   },
   smartphone: {
-    smooth: false
+    smooth: true,
+    touchMultiplier: 5
   }
   
 });

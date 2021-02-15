@@ -286,7 +286,7 @@
         }
     }
     &__navigation {
-        @include mq('tablet') {
+        @include mq('tablet-wide') {
             visibility: hidden;
         }
     } 
