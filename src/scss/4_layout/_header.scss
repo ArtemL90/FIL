@@ -5,14 +5,21 @@
     z-index: 5;
     padding-top: 30px;
     line-height: 46px;
-    transition: .7s;
+    transition: padding .7s;
+    .el-shadow {
+        top: 10px;
+    }
     &--scroll {
-        transition: .7s;
+        transition: padding .7s;
         padding-top: 15px;
     }
     &--active {
+        .el-shadow {
+            top: auto;
+            bottom: -150px;
+        }
         height: calc(var(--vh, 1vh) * 100); // height for full display
-        overflow: hidden;
+        background-color: $dark-color;
         .header__backgr {
             &-container {
                 height: 80%;
@@ -157,9 +164,6 @@
                 }
             }
         }
-    }
-    .el-shadow {
-        top: 10px;
     }
     &__inner {
         display: flex;
