@@ -124,9 +124,6 @@
                         }
                         &:nth-child(4) {
                             margin-top: 4px;
-                            @include mq('tablet-wide') {
-                                margin-top: 0;
-                            }
                         }
                         &:nth-child(3) {
                             .header__hamburg-line-dote {
@@ -274,6 +271,9 @@
             &:nth-child(4) {
                 display: none;
                 margin-top: 6px;
+                @include mq('tablet-wide') {
+                    margin-top: 4px;
+                }
             }
             &-dote {
                 width: 2px;
