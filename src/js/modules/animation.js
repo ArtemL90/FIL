@@ -9,11 +9,11 @@ const locoScrollPlugin = new LocomotiveScroll({
   reloadOnContextChange: true,
   tablet: {
     smooth: true,
-    touchMultiplier: 5
+    lerp: 1
   },
   smartphone: {
     smooth: true,
-    touchMultiplier: 5
+    lerp: 1
   }
   
 });
