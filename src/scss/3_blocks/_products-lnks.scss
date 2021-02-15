@@ -44,6 +44,7 @@
         align-items: center;
         width: 140px;
         margin-left: -60px;
+        z-index: 1;
         @include mq('tablet-small') {
            transform: rotate(0deg);
            margin-left: 0;

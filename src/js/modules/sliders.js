@@ -120,9 +120,8 @@ function addProductSliders(pageName) {
 // add sliders depending on the date attribute
 function addAllSliders() {
   let containerEl = document.querySelector('.js_container');
-  let dataPageName = containerEl.dataset.pageName
-  let dataGroupName = containerEl.dataset.groupName
-  
+  let dataPageName = containerEl.dataset.pageName;
+  let dataGroupName = containerEl.dataset.groupName;
   if( dataGroupName == 'main') {
     addMainSliders(dataPageName);
   }

@@ -71,7 +71,6 @@ function holdBody() {
   bodyEl.classList.toggle('is-fixed')
   if(bodyEl.classList.contains('is-fixed')) {
     locoScrollPlugin.stop()
-    console.log('stop')
   }else {
     locoScrollPlugin.start();
   }

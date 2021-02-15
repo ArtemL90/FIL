@@ -1,7 +1,7 @@
 <!-- head, meta tags, css ..-->
 <?php include "../main-parts/top-part.php" ?>
 <!-- head, meta tags, css .. end-->
-<div class="product page-outer js_container" data-scroll-section data-page-name="coat-tree" data-group-name="product" data-barba="container" data-barba-namespace="lounge-chair">
+<div class="product page-outer js_container" data-scroll-section data-page-name="coat-tree" data-group-name="product" data-barba="container" data-barba-namespace="coat-tree">
     <section class="product__top section-main">
         <div class="product__top-backgrd">
             <img src="../../dist/img/products/products-hero.jpg" alt="backgrd" class="product__top-backgrd-img"  data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
@@ -64,7 +64,7 @@
     <section class="product__gallery"   data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
         <div class="product__gallery-inner page-inner">
             <!-- GALLERY SLIDER -->
-            <div  class="swiper-container gallery-slider  js_lounge-chair-gallery-slider ">
+            <div  class="swiper-container gallery-slider  js_coat-tree-gallery-slider ">
                 <div data-text="next" class="swipe-area swiper-wrapper gallery-slider__wrapper js_swipe-area">
                     <div class="swiper-slide gallery-slider__slide">
                         <img src="../../dist/img/product page/s2-slide-1.jpg" alt="gallery-img" class="gallery-slider__slide-content">
@@ -77,8 +77,8 @@
                     </div>
                 </div>
                 <div class="gallery-slider__itms">
-                    <div class="swiper-pagination js_lounge-chair-gallery-slider-pagination"></div>
-                    <div class="gallery-slider__itms-fraction js_lounge-chair-gallery-slider-indx">01</div>
+                    <div class="swiper-pagination js_coat-tree-gallery-slider-pagination"></div>
+                    <div class="gallery-slider__itms-fraction js_coat-tree-gallery-slider-indx">01</div>
                 </div>
             </div>
             <!-- GALLERY SLIDER END -->

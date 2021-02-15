@@ -128,11 +128,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        z-index: 2;
         .swiper-pagination {
             flex-direction: column;
             height: 52px;
-            width: auto;
             margin:0;
             position: absolute;
             top: 50%;

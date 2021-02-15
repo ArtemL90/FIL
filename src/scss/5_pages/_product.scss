@@ -1,12 +1,14 @@
 .product {
     &__top {
-
         &-inner {
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
             height: 40%;
             padding-top: 30px;
+            @include mq('tablet-small') {
+                height: 50%;
+            }
         }
         &-ttl {
             position: relative;

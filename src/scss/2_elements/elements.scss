@@ -7,7 +7,7 @@ h1 {
   color: $base-text-color;
   font-family: ShreeDev0714;
   font-weight: 400;
-  @include adapted-font(66, 56);
+  @include adapted-font(66, 50);
 }
 h2 {
   color: $grey-color;
