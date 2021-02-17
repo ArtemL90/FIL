@@ -1,12 +1,17 @@
 // Plugins
-@import 'swiper/swiper-bundle.css'; // Swiper Slider Base Styles
+@import "swiper/swiper-bundle.css"; // Swiper Slider Base Styles
+
 // Base
-@import '1_base/base';
+@import "1_base/base";
+
 // Elements
-@import '2_elements/elements';
+@import "2_elements/elements";
+
 // Blocks
-@import '3_blocks/blocks';
+@import "3_blocks/blocks";
+
 // Pages
-@import '5_pages/pages';
+@import "5_pages/pages";
+
 // Layout
-@import '4_layout/layout';
+@import "4_layout/layout";

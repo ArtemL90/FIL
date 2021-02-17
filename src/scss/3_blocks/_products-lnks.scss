@@ -1,65 +1,76 @@
 .products-lnks {
-    margin: 0 auto;
-    @include section-idents;
-    height: $section-height;
+  @include section-idents;
+
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  height: $section-height;
+
+  &__inner {
     position: relative;
-    padding-bottom: 40px;
-    @include mq('tablet-small') {
-        height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: visible;
+    height: 100%;
+
+    @include mq("tablet-small") {
+      align-items: flex-start;
+      justify-content: flex-start;
     }
-    &__texture {
-        width: 400px;
-        height: 100%;
-        position: absolute;
-        left: $left-itm-ident;
-        overflow: hidden;
-        @include mq('tablet-small') {
-            width: 280px;
-            height: 250px;
-            left: 0;
-            top:-40px;
-        }
-        &-backgrd {
-            width: 100%;
-            height: 130%;
-            margin-top: -30%;
-            object-fit: cover;
-        }
+  }
+
+  &__texture {
+    position: absolute;
+    left: $left-itm-ident;
+    overflow: hidden;
+    width: 400px;
+    height: 100%;
+
+    &-backgrd {
+      margin-top: -30%;
+      width: 100%;
+      height: 130%;
+      object-fit: cover;
     }
-    &__inner {
-        position: relative;
-        display: flex;
-        height: 100%;
-        justify-content: space-between;
-        align-items: center;
-        overflow-x: visible;
-        @include mq('tablet-small') {
-            align-items: flex-start;
-            justify-content: flex-start;
-        }
+
+    @include mq("tablet-small") {
+      left: 0;
+      top: -40px;
+      width: 280px;
+      height: 250px;
     }
-    &__ttl {
-        transform: rotate(-90deg);
-        display: flex;
-        align-items: center;
-        width: 140px;
-        margin-left: -60px;
-        z-index: 1;
-        @include mq('tablet-small') {
-           transform: rotate(0deg);
-           margin-left: 0;
-           position: absolute;
-           top:0px;
-        }
-        mark {
-            background-color: transparent;
-            color: $base-text-color;
-        }
-        &-itm {
-            width: 20px;
-            height: 1px;
-            background-color: $grey-color;
-            margin:0 12px;
-        }
+  }
+
+  &__ttl {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    margin-left: -60px;
+    width: 140px;
+    transform: rotate(-90deg);
+
+    mark {
+      color: $base-text-color;
+      background-color: transparent;
     }
+
+    &-itm {
+      margin: 0 12px;
+      width: 20px;
+      height: 1px;
+      background-color: $grey-color;
+    }
+
+    @include mq("tablet-small") {
+      position: absolute;
+      top: 0;
+      margin-left: 0;
+      transform: rotate(0deg);
+    }
+  }
+
+  @include mq("tablet-small") {
+    height: auto;
+  }
 }

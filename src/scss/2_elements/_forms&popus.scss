@@ -1,226 +1,275 @@
 // form & thanks outer
 .popup-outer {
-    width: 100%;
-    height: calc(var(--vh, 1vh) * 100); // height for full display
-    min-height: 500px;
-    position: fixed;
-    z-index: 10;
-    top:0;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    padding:15px;
-    background-color: rgba(26, 26, 26, 0.9);
-    display: flex;
-    animation: fadeOutPopup ease 1s forwards;
-    animation-delay: 0.5s;
-    &--active {
-        animation: fadeInPopup ease 1s forwards;
-        .popup-request {
-            &__outer {
-                &::before {
-                    animation: addCirBackgrd 1s linear forwards;
-                    animation-delay: 0.5s;
-                }
-            }
-            
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 15px;
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100); // height for full display
+  min-height: 500px;
+  background-color: rgba(26, 26, 26, 0.9);
+  animation: fadeOutPopup ease 1s forwards;
+  animation-delay: 0.5s;
+
+  &--active {
+    animation: fadeInPopup ease 1s forwards;
+
+    .popup-request {
+      &__outer {
+        &::before {
+          animation: addCirBackgrd 1s linear forwards;
+          animation-delay: 0.5s;
         }
+      }
     }
-    &--thanks {
-        .popup-request {
-            animation: fadeOutPopup ease 0.5s forwards;
-            &__outer {
-                height: 450px;
-            }
-        }
-        .thanks {
-            animation: fadeInPopup ease 0.5s forwards;
-            animation-delay: 0.7s;
-            &::before {
-                animation: addCirBackgrd 1s linear forwards;
-                animation-delay: 0.5s;
-            }
-        }
+  }
+
+  &--thanks {
+    .popup-request {
+      animation: fadeOutPopup ease 0.5s forwards;
+
+      &__outer {
+        height: 450px;
+      }
     }
+
+    .thanks {
+      animation: fadeInPopup ease 0.5s forwards;
+      animation-delay: 0.7s;
+
+      &::before {
+        animation: addCirBackgrd 1s linear forwards;
+        animation-delay: 0.5s;
+      }
+    }
+  }
 }
 
 .close-btn {
-    min-width: 14px;
-    min-height: 14px;
-    position: absolute;
-    top: 20px;right: 20px;
-    z-index: 13;
-    cursor: pointer;
-    &__line {
-        width: 100%;
-        display: flex;
-        &:nth-child(1), &:nth-child(3) {
-            justify-content: space-between;
-        }
-        &:nth-child(2) {
-            margin:4px 0;
-            justify-content: center;
-        }
-        &-dote {
-            width: 2px;
-            height: 2px;
-            background-color: $grey-color;
-            transition: $text-hover-trans;
-        }
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 13;
+  min-width: 14px;
+  min-height: 14px;
+  cursor: pointer;
+
+  &__line {
+    display: flex;
+    width: 100%;
+
+    &-dote {
+      width: 2px;
+      height: 2px;
+      background-color: $grey-color;
+      transition: $text-hover-trans;
     }
-    &:hover {
-        .close-btn__line-dote {
-            background-color: $base-text-color;
-            transition: $text-hover-trans;
-            transform: scale(1.2);
-        }
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      justify-content: space-between;
     }
+
+    &:nth-child(2) {
+      justify-content: center;
+      margin: 4px 0;
+    }
+  }
+
+  &:hover {
+    .close-btn__line-dote {
+      background-color: $base-text-color;
+      transform: scale(1.2);
+      transition: $text-hover-trans;
+    }
+  }
 }
 
 // form styles
-.popup-request, .thanks {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; 
-    text-align: center;
-    &__ttl {
-        @include adapted-font(36, 30)
-        letter-spacing: 0.6;
-        margin-bottom: 35px;
-        font-weight: 400;
-        z-index: 1;  
-    }
-    &__btn {
-        background-color: $base-text-color;
-        margin-top: 50px;
-        z-index: 1;
-    }
-}    
-.popup-request {
-    z-index: 1;
-    &__outer {
-        width: 600px;
-        height: 600px;
-        position: relative;
-        background-color: transparent;
-        overflow: hidden;
-        z-index: 12;
-        @include mq('tablet') {
-            width: 100%;
-            height: 500px;
-        }
-        &::before {
-            @include pseudo;
-            width: 0;height: 0;
-            border-radius: 100%;
-            animation: removeCirBackgrd 2s linear forwards;
-            background-color: $dark-color;
-            z-index: 0;
-            top: -50%;left: -50%;
-            
-        }
-    }
-    &__itm {
-        width: 360px;
-        padding:12px;
-        border-radius: 0;
-        text-align: center;
-        box-shadow: none;
-        border: 0;
-        background-color: transparent;
-        letter-spacing: 1.2px;
-        color: $base-text-color;
-        z-index: 1;
-        &::placeholder {
-            line-height: 55px;
-            color: $grey-color;
-        }
-        &-outer {
-            background-color: transparent;
-            position: relative;
-            &::after {
-                @include pseudo;
-                height: 1px;
-                bottom: 0;
-                width: 0;
-                background-color: $grey-color;
-                left: 50%;
-                transform: translate(-50%,0);
-                transition: $text-hover-trans;
-            }
-            &:hover {
-                &::after {
-                    transition: $text-hover-trans;
-                    width: 100%;
-                }
-            }
-            &--active{
-                &::after {
-                    transition: $text-hover-trans;
-                    width: 100%;
-                    background-color: $base-text-color;
-                }
-            }
-            &:nth-child(3) {
-                margin: 25px 0;
-            }
-        }
-        
-    }
-}
-.input-change{
-    &::after {
-        transition: $text-hover-trans;
-        width: 100%;
-        background-color: $grey-color;
-    }
-}
+.popup-request,
 .thanks {
-    opacity: 0;
-    visibility: hidden;
-    z-index: 0;
-    &__txt {
-        color: $grey-color;
-        margin-top: 25px;
-        margin-bottom: 10px;
-        z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  &__ttl {
+    @include adapted-font(36, 30);
+
+    z-index: 1;
+    margin-bottom: 35px;
+    font-weight: 400;
+    letter-spacing: 0.6;
+  }
+
+  &__btn {
+    z-index: 1;
+    margin-top: 50px;
+    background-color: $base-text-color;
+  }
+}
+
+.popup-request {
+  z-index: 1;
+
+  &__outer {
+    position: relative;
+    z-index: 12;
+    overflow: hidden;
+    width: 600px;
+    height: 600px;
+    background-color: transparent;
+
+    &::before {
+      @include pseudo;
+
+      left: -50%;
+      top: -50%;
+      z-index: 0;
+      border-radius: 100%;
+      width: 0;
+      height: 0;
+      background-color: $dark-color;
+      animation: removeCirBackgrd 2s linear forwards;
     }
+
+    @include mq("tablet") {
+      width: 100%;
+      height: 500px;
+    }
+  }
+
+  &__itm {
+    z-index: 1;
+    border: 0;
+    border-radius: 0;
+    padding: 12px;
+    width: 360px;
+    box-shadow: none;
+    letter-spacing: 1.2px;
+    text-align: center;
+    color: $base-text-color;
+    background-color: transparent;
+
+    &::placeholder {
+      line-height: 55px;
+      color: $grey-color;
+    }
+
+    &-outer {
+      position: relative;
+      background-color: transparent;
+
+      &::after {
+        @include pseudo;
+
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: $grey-color;
+        transform: translate(-50%, 0);
+        transition: $text-hover-trans;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+          transition: $text-hover-trans;
+        }
+      }
+
+      &:nth-child(3) {
+        margin: 25px 0;
+      }
+
+      &--active {
+        &::after {
+          width: 100%;
+          background-color: $base-text-color;
+          transition: $text-hover-trans;
+        }
+      }
+    }
+  }
+}
+
+.input-change {
+  &::after {
+    width: 100%;
+    background-color: $grey-color;
+    transition: $text-hover-trans;
+  }
+}
+
+.thanks {
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+
+  &__txt {
+    z-index: 1;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: $grey-color;
+  }
 }
 
 // functions anim
-@keyframes fadeInPopup {
-    0% {opacity:0;}
-    100% {opacity:1;
-        visibility: visible;
-        z-index: 1;
-    }
-}
-@keyframes fadeOutPopup {
-    0% {opacity:1;}
-    100% {opacity:0;
-        visibility: hidden;
-        z-index: 0;
-    }
-}
-@keyframes addCirBackgrd {
-    0%{height: 0;
-        width: 0;
-    }
-    100%{height: 200%;
-        width: 200%;
-    }
-}
-@keyframes removeCirBackgrd {
-    0%{height: 200%;
-        width: 200%;
-    }
-    100%{height: 0;
-        width: 0;
-    }
-} 
 
+@keyframes fadeInPopup {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeOutPopup {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes addCirBackgrd {
+  0% {
+    width: 0;
+    height: 0;
+  }
+
+  100% {
+    width: 200%;
+    height: 200%;
+  }
+}
+
+@keyframes removeCirBackgrd {
+  0% {
+    width: 200%;
+    height: 200%;
+  }
+
+  100% {
+    width: 0;
+    height: 0;
+  }
+}

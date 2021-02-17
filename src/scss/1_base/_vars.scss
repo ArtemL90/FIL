@@ -1,13 +1,14 @@
 // main colors
-$base-backgrd: #1A1A1A;
-$base-text-color: #FFFFFF;
-$dark-color: #000000;
-$grey-color: #8C8C8C;
+
+$base-backgrd: #1a1a1a;
+$base-text-color: #fff;
+$dark-color: #000;
+$grey-color: #8c8c8c;
 
 // sizes
+
 $base-font-size: 16px;
 $text-block-width: 280px;
-
 $xl-rectangle-width: 600px;
 $lg-rectangle-width: 400px;
 $md-rectangle-width: 300px;
@@ -15,22 +16,26 @@ $sm-rectangle-width: 200px;
 $md-rectangle-width-half: calc(#{$md-rectangle-width} / 2);
 
 // < 'tablet-small'
+
 $xl-rectangle-width--phone: 288px;
 $md-rectangle-width--phone: 145px;
 $md-rectangle-width-half--phone: calc(#{$md-rectangle-width--phone} / 2);
 $lg-rectangle-width--phone: 345px;
-
 $lg-rectangle-height: 700px;
 $md-rectangle-height: 400px;
 $sm-rectangle-height: 300px;
 $section-height: 800px;
+
 // < 'tablet-small'
+
 $lg-rectangle-height--phone: 380px;
 $md-rectangle-height--phone: 220px;
-// idents 
+
+// idents
 
 $left-itm-ident: -130px;
 
-// transitions & hovers 
-$text-hover-trans: .4s;
+// transitions & hovers
+
+$text-hover-trans: 0.4s;
 $anim-trans-time: 1.5s;

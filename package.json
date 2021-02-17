@@ -30,6 +30,8 @@
     "postcss-loader": "^4.0.2",
     "sass-loader": "^10.0.2",
     "speed-measure-webpack-plugin": "^1.3.3",
+    "stylelint": "^13.10.0",
+    "stylelint-webpack-plugin": "^2.1.1",
     "svg-url-loader": "^6.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.44.2",
@@ -51,6 +53,10 @@
     "locomotive-scroll": "^4.0.6",
     "only-if-changed-webpack-plugin": "0.0.3",
     "sal.js": "^0.8.1",
+    "stylefmt-loader": "^1.2.3",
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.19.0",
     "swiper": "^6.3.2"
   }
 }

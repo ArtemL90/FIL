@@ -3,71 +3,99 @@
     color: $base-text-color;
   }
 }
+
 .active {
-  display: block!important;
-  animation: fadeIn cubic-bezier(0.5, 1, 0.89, 1) .6s;
+  /* stylelint-disable-next-line declaration-no-important */
+  display: block !important;
+  animation: fadeIn cubic-bezier(0.5, 1, 0.89, 1) 0.6s;
+
   @keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 }
+
 .is-fixed {
   position: fixed;
 }
+
 .is-blur {
   animation: addBlur 1s ease-in forwards;
+
   @keyframes addBlur {
-      0%{filter: blur(0);}
-      100%{filter: blur(2px);}
+    0% {
+      filter: blur(0);
+    }
+
+    100% {
+      filter: blur(2px);
+    }
   }
 }
+
 .circle-btn {
+  position: relative;
+  border-radius: 100%;
   width: auto;
   transition: 1s;
-  border-radius: 100%;
-  position: relative;
-  &__txt {
-     z-index: 2;
-     position: relative;
-  }
+
   &::after {
     @include pseudo;
-    width: 0;height: 0;
+
+    left: 50%;
+    top: 50%;
+    z-index: 1;
     border-radius: 100%;
+    width: 0;
+    height: 0;
     background-color: $dark-color;
-    left: 50%;top: 50%;
     transform: translate(-50%, -50%);
     transition: 0.7s;
-    z-index: 1;
   }
+
+  &__txt {
+    position: relative;
+    z-index: 2;
+  }
+
   &:hover {
     transition: 0.7s;
+
     &::after {
+      width: 105%;
+      height: 105%;
       transition: 0.7s;
-      width: 105%;height: 105%;
     }
+
     .circle-btn__txt {
-       color: $base-text-color;
-       transition: 1s;
+      color: $base-text-color;
+      transition: 1s;
     }
   }
 }
+
 .lnk-effect {
   color: $grey-color;
-  transition: color #{$text-hover-trans} linear; 
+  transition: color #{$text-hover-trans} linear;
+
   &:hover {
-    transition: color #{$text-hover-trans} linear;
+    text-shadow: 0 0 3px #{$base-text-color};
     color: $base-text-color;
-    text-shadow: 0px 0px 3px #{$base-text-color}; 
+    transition: color #{$text-hover-trans} linear;
   }
 }
 
 .trans-txt-block {
-    animation: addTransX #{$anim-trans-time} ease-in-out forwards;
-    @keyframes  addTransX{
-      100%{
-        transform: translateX(0);
-      }
-    }
-}
+  animation: addTransX #{$anim-trans-time} ease-in-out forwards;
 
+  @keyframes addTransX {
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

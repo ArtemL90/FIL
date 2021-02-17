@@ -1,307 +1,330 @@
 
 *,
-*:after,
-*:before {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    -webkit-appearance: none;
-    user-select: none;
+*::after,
+*::before {
+  appearance: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
 }
 
-
-
 a {
-	outline: none;
+  outline: none;
   text-decoration: none;
   color: $grey-color;
 }
 
 button {
-	border: none;
-	cursor: pointer;
+  border: none;
+  cursor: pointer;
 }
+
 textarea,
 input[type="radio"],
 .input-checkbox {
--webkit-appearance: none;
-border-radius: 0;
-border:none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
 }
-.stop-flickering {-webkit-transform:translate3d(0,0,0);}
 
-html,body {
+.stop-flickering {
+  transform: translate3d(0, 0, 0);
+}
+
+html,
+body {
+  overflow-x: hidden;
   width: 100%;
   min-width: 375px;
-  background-color: $base-backgrd;
-  font-family: Roboto;
+  font-family: "Roboto";
   font-weight: 300;
-  letter-spacing: 1.2px;
   font-size: $base-font-size;
+  letter-spacing: 1.2px;
   color: $base-text-color;
-  overflow-x: hidden;
+  background-color: $base-backgrd;
 }
-
 
 .page-inner {
   margin: 0 auto;
+  padding: 0 20px;
   width: 100%;
   max-width: 1280px;
-  padding:0 20px;
-  @include mq('tablet') {
+
+  @include mq("tablet") {
     padding: 0 15px;
   }
 }
 
 .section-main {
-  width: 100%;
-  height: calc(var(--vh, 1vh) * 100); // height for full display
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100); // height for full display
   .el-shadow {
     bottom: -150px;
   }
+
   &__ttl {
-      text-align: right;
-      margin-bottom: 0;
-      position: relative;
-      z-index: 3;
+    position: relative;
+    z-index: 3;
+    margin-bottom: 0;
+    text-align: right;
   }
+
   &__inner {
-      width: 100%;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      padding-bottom: 30px;
-      @include mq('tablet') {
-        justify-content: center;
-        height: 100%;
-      }
-      
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    width: 100%;
+
+    @include mq("tablet") {
+      justify-content: center;
+      height: 100%;
+    }
   }
+
   &__itms {
-      width: 100%;
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      z-index: 3;
-      @include mq('tablet') {
-        position: static;
-        justify-content: flex-end;
-        .swiper-pagination {
-            position: absolute;
-            bottom: 50px;
-        }
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    @include mq("tablet") {
+      position: static;
+      justify-content: flex-end;
+
+      .swiper-pagination {
+        position: absolute;
+        bottom: 50px;
       }
+    }
   }
 }
 
 .line-block {
   @include section-idents;
-  width: 100%;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  @include mq('tablet-wide') {
+  justify-content: space-between;
+  width: 100%;
+
+  @include mq("tablet-wide") {
     flex-direction: column;
     align-items: flex-start;
   }
 }
 
 // pages styles
-.concept, .story, .product {
+.concept,
+.story,
+.product {
   &__top {
     &-backgrd {
-        position: absolute;
-        height: calc(var(--vh, 1vh) * 100); // height for full display
+      position: absolute;
+      overflow: hidden;
+      width: 100%;
+      height: calc(var(--vh, 1vh) * 100); // height for full display
+      &-img {
         width: 100%;
-        overflow: hidden;
-        &-img {
-          height: 130%;
-          width: 100%;
-          object-fit: cover;
-        }
+        height: 130%;
+        object-fit: cover;
+      }
     }
+
     &-inner {
-        height: 100%;
-        align-items: flex-end;
-        flex-direction: row;
-        
+      flex-direction: row;
+      align-items: flex-end;
+      height: 100%;
     }
+
     &-ttl {
-        text-align: left;
-        position: absolute;
-        top:50%;
-        transform: translate(0, -50%);
-        @include mq('tablet') {
-          left: 15px;
-        }
+      position: absolute;
+      top: 50%;
+      text-align: left;
+      transform: translate(0, -50%);
+
+      @include mq("tablet") {
+        left: 15px;
+      }
     }
   }
+
   &__info {
     position: relative;
-    @include mq('tablet-small') {
+
+    &-inner {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding-bottom: 100px;
+      min-height: calc(#{$lg-rectangle-height} - 100px);
+
+      @include mq("tablet-small") {
+        padding-bottom: 0;
+        min-height: auto;
+      }
+    }
+
+    &-pic {
+      position: relative;
+      z-index: 1;
+
+      @include mq("tablet-small") {
+        display: none;
+      }
+    }
+
+    .info-card {
+      bottom: 0;
+      z-index: 3;
+
+      @include mq("tablet-small") {
+        position: relative;
+        right: -12px;
+        margin: 0 auto;
+      }
+    }
+
+    &-ticker {
+      position: absolute;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: $sm-rectangle-height;
+      white-space: nowrap;
+      opacity: 10%;
+
+      &-inner {
+        display: inline-block;
+        animation-name: ticker;
+        animation-duration: 40s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        &:nth-child(2) {
+          display: inline-block;
+          animation-name: ticker2;
+          animation-duration: 40s;
+          animation-delay: -20s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+        }
+      }
+
+      &-txt {
+        display: inline-block;
+        padding-right: 400px;
+        font-family: "ShreeDev0714";
+        font-weight: 400;
+        font-size: 300px;
+        line-height: 375px;
+        letter-spacing: 22.5px;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      @include mq("tablet-small") {
+        display: none;
+      }
+
+      @keyframes ticker {
+        0% {
+          transform: translateX(100%);
+        }
+
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      @keyframes ticker {
+        0% {
+          transform: translateX(100%);
+        }
+
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      @keyframes ticker2 {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-200%);
+        }
+      }
+
+      @keyframes ticker2 {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-200%);
+        }
+      }
+    }
+
+    @include mq("tablet-small") {
       @include section-idents;
     }
-    &-inner {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        min-height: calc(#{$lg-rectangle-height} - 100px);
-        padding-bottom: 100px;
-        @include mq('tablet-small') {
-          padding-bottom: 0;
-          min-height: auto;
-        }  
-    }
-    &-pic {
-        position: relative;
-        z-index: 1;
-        @include mq('tablet-small') {
-          display: none;
-        }
-    }
-    .info-card {
-        z-index: 3;
-        bottom:0;
-        @include mq('tablet-small') {
-          position: relative;
-          right: -12px;
-          margin: 0 auto;
-        }
-    }
-    &-ticker{
-        width: 100%;
-        position: absolute;
-        left: 0;
-        z-index: 0;
-        height: $sm-rectangle-height;
-        white-space: nowrap;
-        opacity: 10%;
-        @include mq('tablet-small') {
-          display: none;
-        }
-        &-inner {
-            display: inline-block;
-            -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-            -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-            -webkit-animation-name: ticker;
-            animation-name: ticker;
-            -webkit-animation-duration: 40s;
-            animation-duration: 40s;
-            &:nth-child(2) {
-                display: inline-block;
-                -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
-                -webkit-animation-timing-function: linear;
-                animation-timing-function: linear;
-                -webkit-animation-name: ticker2;
-                animation-name: ticker2;
-                -webkit-animation-duration: 40s;
-                animation-duration: 40s;
-                -webkit-animation-delay: -20s;
-                animation-delay: -20s;
-               
-            }
-            
-        }
-        &-txt {
-            display: inline-block;
-            font-family: ShreeDev0714;
-            letter-spacing: 22.5px;
-            font-size: 300px;
-            font-weight: 400;
-            line-height: 375px;
-            color: transparent;
-            text-transform: uppercase;
-            padding-right: 400px;
-            color: #fff;
-        }
-        @-webkit-keyframes ticker {
-            0% {
-              -webkit-transform: translateX(100%);
-              transform: translateX(100%);
-            }
-            100% {
-              -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
-            }
-          }
-          @keyframes ticker {
-            0% {
-                -webkit-transform: translateX(100%);
-                transform: translateX(100%);
-              }
-              100% {
-                -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
-              }
-          }
-          @-webkit-keyframes ticker2 {
-            0% {
-              -webkit-transform: translateX(0);
-              transform: translateX(0);
-            }
-            100% {
-              -webkit-transform: translateX(-200%);
-              transform: translateX(-200%);
-            }
-          }
-          @keyframes ticker2 {
-            0% {
-                -webkit-transform: translateX(0);
-                transform: translateX(0);
-              }
-            100% {
-                -webkit-transform: translateX(-200%);
-                transform: translateX(-200%);
-            }
-          }
-  
-    }
-  
   }
 }
-.concept, .story {
+
+.concept,
+.story {
   &__about {
+    @include section-idents;
+
+    position: relative;
     width: 100%;
     height: $section-height;
-    position: relative;
-    @include section-idents;
+
     &-inner {
-        position: relative;
-        height: 100%;
+      position: relative;
+      height: 100%;
     }
+
     .info-card__content {
-        background-color: $base-text-color;
-        color: $dark-color;
+      color: $dark-color;
+      background-color: $base-text-color;
     }
+
     .swiper-pagination-bullet {
-        opacity: 1;
-        background-color: $grey-color;
+      background-color: $grey-color;
+      opacity: 1;
     }
+
     .swiper-pagination-bullet-active {
-        width: 12px;
-        height: 12px;
-        background-color: transparent;
-        border-radius: 50%;
-        border:1px solid #{$grey-color};
+      border: 1px solid #{$grey-color};
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      background-color: transparent;
     }
-    .double-slider__itms-fraction  {
+
+    .double-slider__itms-fraction {
       color: $grey-color;
     }
-  } 
-} 
-@import 'main';
-@import 'concept';
-@import 'story';
-@import 'product';
-@import 'products';
+  }
+}
+
+@import "main";
+@import "concept";
+
+// @import "story";
+@import "product";
+@import "products";

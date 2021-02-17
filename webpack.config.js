@@ -7,7 +7,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const StylelintPlugin = require('stylelint-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+
 
 // module settings
 module.exports = {
@@ -112,6 +114,14 @@ module.exports = {
           filename: './css/[name].css',
           disable: false, 
           allChunks: true
+        }),
+        new StylelintPlugin ({
+            configFile: '.stylelintrc',
+            context: 'scss',
+            files: '**/*.scss',
+            failOnError: false,
+            quiet: false,
+            emitErrors: true
         }),
         new BrowserSyncPlugin({
             host: "localhost",
