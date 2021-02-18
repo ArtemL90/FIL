@@ -1,50 +1,49 @@
-//import { containerEl, bodyEl, pageTransInterval } from './common.js';
+// import { containerEl, bodyEl, pageTransInterval } from './common.js';
 
 // init sliders
 // init Swiper Plugin
 import Swiper from 'swiper/bundle';
 // add slide index
 function showSlideIndex(sliderName, indxEl) {
-  let slideIndxEl = indxEl;
-  let slideIndxNum = '0' +  String(sliderName.realIndex + 1);
+  const slideIndxEl = indxEl;
+  const slideIndxNum = `0${String(sliderName.realIndex + 1)}`;
   slideIndxEl.textContent = slideIndxNum;
 }
 
-
 // add  double slider
 function addDoubleSlider(pageNameStr) {
-  let sliderTxt= new Swiper('.js_' + pageNameStr + '-double-slider-info', {
+  const sliderTxt = new Swiper(`.js_${pageNameStr}-double-slider-info`, {
     loop: true,
     effect: 'fade',
     fadeEffect: {
-      crossFade: true
+      crossFade: true,
     },
     noSwipingClass: 'swiper-no-swiping',
   });
 
-  let sliderBg = new Swiper('.js_' + pageNameStr + '-double-slider-bg', {
+  const sliderBg = new Swiper(`.js_${pageNameStr}-double-slider-bg`, {
     loop: true,
     effect: 'fade',
     fadeEffect: {
-      crossFade: true
+      crossFade: true,
     },
     speed: 1000,
-    touchStartPreventDefault: false,    
+    touchStartPreventDefault: false,
     pagination: {
-      el: '.js_' + pageNameStr + '-double-slider-pagination',
-      clickable: true,  
+      el: `.js_${pageNameStr}-double-slider-pagination`,
+      clickable: true,
     },
-    
+
   });
   sliderBg.on('slideChange', function () {
-    let slideIndxEl = document.querySelector('.js_' + pageNameStr + '-double-slider-indx');
+    const slideIndxEl = document.querySelector(`.js_${pageNameStr}-double-slider-indx`);
     showSlideIndex(this, slideIndxEl);
   });
   sliderBg.controller.control = sliderTxt;
 }
 // add links slider
-function addLinksSlider()  {
-  let  lnksSlider = new Swiper('.js_lnks-slider', {
+function addLinksSlider() {
+  const lnksSlider = new Swiper('.js_lnks-slider', {
     // Optional parameters
     slidesPerView: 6.5,
     touchStartPreventDefault: false,
@@ -55,54 +54,52 @@ function addLinksSlider()  {
       640: {
         spaceBetween: 15,
         slidesPerView: 6,
-      }
-    }
+      },
+    },
   });
 }
 
-
 // add sliders for main page
 function addMainSliders(pageName) {
-  let  mainSlider = new Swiper('.js_main-slider', {
-      // Optional parameters
-      loop: true,
-      effect: 'fade',
-      speed: 1000,
-      touchStartPreventDefault: false,
-      navigation: {
-        nextEl: '.js_main-slider-next',
-        prevEl: '.js_main-slider-prev',
-      },
-      pagination: {
-        el: '.js_main-slider-pagination',
-        clickable: true,
-      },
-      autoplay: {
-        delay: 7000,
-      }
+  const mainSlider = new Swiper('.js_main-slider', {
+    // Optional parameters
+    loop: true,
+    effect: 'fade',
+    speed: 1000,
+    touchStartPreventDefault: false,
+    navigation: {
+      nextEl: '.js_main-slider-next',
+      prevEl: '.js_main-slider-prev',
+    },
+    pagination: {
+      el: '.js_main-slider-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 7000,
+    },
   });
 
   addLinksSlider();
   addDoubleSlider(pageName);
-};
+}
 
-
-// add gallery slider 
+// add gallery slider
 function addGallerySlider(pageNameStr) {
-  let gallerySlider = new Swiper('.js_' + pageNameStr + '-gallery-slider', {
+  const gallerySlider = new Swiper(`.js_${pageNameStr}-gallery-slider`, {
     loop: true,
     speed: 1000,
     touchStartPreventDefault: false,
     effect: 'fade',
     pagination: {
-      el: '.js_' + pageNameStr + '-gallery-slider-pagination',
-      clickable: true,  
-    }, 
+      el: `.js_${pageNameStr}-gallery-slider-pagination`,
+      clickable: true,
+    },
   });
 
   gallerySlider.on('slideChange', function () {
-      let slideIndxEl = document.querySelector('.js_' + pageNameStr + '-gallery-slider-indx');
-      showSlideIndex(this, slideIndxEl);
+    const slideIndxEl = document.querySelector(`.js_${pageNameStr}-gallery-slider-indx`);
+    showSlideIndex(this, slideIndxEl);
   });
 }
 // add sliders for pages: concept, story
@@ -119,19 +116,18 @@ function addProductSliders(pageName) {
 
 // add sliders depending on the date attribute
 function addAllSliders() {
-  let containerEl = document.querySelector('.js_container');
-  let dataPageName = containerEl.dataset.pageName;
-  let dataGroupName = containerEl.dataset.groupName;
-  if( dataGroupName == 'main') {
+  const containerEl = document.querySelector('.js_container');
+  const dataPageName = containerEl.dataset.pageName;
+  const dataGroupName = containerEl.dataset.groupName;
+  if (dataGroupName == 'main') {
     addMainSliders(dataPageName);
   }
-  if( dataGroupName == 'page') {
+  if (dataGroupName == 'page') {
     addPageSliders(dataPageName);
   }
-  if( dataGroupName == 'product') {
-    addProductSliders(dataPageName)
+  if (dataGroupName == 'product') {
+    addProductSliders(dataPageName);
   }
 }
 addAllSliders();
 export { addAllSliders };
-

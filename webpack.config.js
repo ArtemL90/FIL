@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 // module settings
 module.exports = {
@@ -122,6 +122,11 @@ module.exports = {
             failOnError: false,
             quiet: false,
             emitErrors: true
+        }),
+        new ESLintPlugin({
+            exclude: '.eslintrc',
+            context: 'js',
+            files: '**/*.js'
         }),
         new BrowserSyncPlugin({
             host: "localhost",

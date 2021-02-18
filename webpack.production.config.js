@@ -11,6 +11,7 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssnanoPlugin = require('cssnano-webpack-plugin');
 
+
 // module settings
 module.exports = {
     mode: 'production',

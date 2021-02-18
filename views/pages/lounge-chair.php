@@ -1,10 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="furniture online shop">
+	<title>MASS Series Lounge Chair | FIL</title>
 <!-- head, meta tags, css ..-->
 <?php include "../main-parts/top-part.php" ?>
 <!-- head, meta tags, css .. end-->
 <div class="product page-outer js_container" data-scroll-section data-page-name="lounge-chair" data-group-name="product" data-barba="container" data-barba-namespace="lounge-chair">
     <section class="product__top section-main">
         <div class="product__top-backgrd">
-            <img src="../../dist/img/products/products-hero.jpg" alt="backgrd" class="product__top-backgrd-img"  data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
+            <img src="../../dist/img/mass series lounge chair/s2-hero-d.jpg" alt="backgrd" class="product__top-backgrd-img"  data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
         </div>
         <div class="product__top-ttl-outer page-inner">
             <h1 class="product__top-ttl section-main__ttl">MASS Series<br>Lounge Chair</h1>
@@ -29,7 +35,7 @@
                     <div class="product__info-ticker-txt">Lounge</div>
                 </div>
             </div>
-            <img src="../../dist/img/product page/s2-intro.jpg" alt="rectangle" class="product__info-pic pic-rectangle--sm" data-scroll data-scroll-direction="horizontal"  data-scroll-speed="-2" data-scroll-repeat="true" >
+            <img src="../../dist/img/mass series lounge chair/22566c5e-f6de-4f8a-991d-37665ef0f017.jpeg" alt="rectangle" class="product__info-pic pic-rectangle--sm" data-scroll data-scroll-direction="horizontal"  data-scroll-speed="-2" data-scroll-repeat="true" >
             <div class="product__info-card info-card">
                 <div class="info-card__content">
                     <h2 class="product__info-card-ttl">Details</h2>
@@ -70,13 +76,13 @@
             <div  class="swiper-container gallery-slider  js_lounge-chair-gallery-slider ">
                 <div data-text="next" class="swipe-area swiper-wrapper gallery-slider__wrapper js_swipe-area">
                     <div class="swiper-slide gallery-slider__slide">
-                        <img src="../../dist/img/product page/s2-slide-1.jpg" alt="gallery-img" class="gallery-slider__slide-content">
+                        <img src="../../dist/img/mass series lounge chair/s2-slide-1.jpg" alt="gallery-img" class="gallery-slider__slide-content">
                     </div>
                     <div class="swiper-slide gallery-slider__slide">
-                        <img src="../../dist/img/product page/s2-slide-2.jpg" alt="gallery-img" class="gallery-slider__slide-content">
+                        <img src="../../dist/img/mass series lounge chair/s2-slide-2.jpg" alt="gallery-img" class="gallery-slider__slide-content">
                     </div>
                     <div class="swiper-slide gallery-slider__slide">
-                        <img src="../../dist/img/product page/s2-slide-3.jpg" alt="gallery-img" class="gallery-slider__slide-content">
+                        <img src="../../dist/img/mass series lounge chair/s2-slide-3.jpg" alt="gallery-img" class="gallery-slider__slide-content">
                     </div>
                 </div>
                 <div class="gallery-slider__itms">

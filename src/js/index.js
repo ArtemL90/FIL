@@ -1,12 +1,11 @@
 // plugins
 import './modules/fullPage';
 // modules
-import './modules/common.js';
-import './modules/sliders.js';
-import './modules/barbaInst.js';
-import './modules/animation.js';
-import './modules/header.js';
-import './modules/custom-cursor.js';
-import './modules/popup.js';
-import './modules/sendForm.js';
-
+import './modules/common';
+import './modules/sliders';
+import './modules/barbaInst';
+import './modules/animation';
+import './modules/header';
+import './modules/custom-cursor';
+import './modules/popup';
+import './modules/sendForm';

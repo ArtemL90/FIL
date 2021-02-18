@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="furniture online shop">
+	<title>Concept | FIL</title>
 <!-- head, meta tags, css ..-->
 <?php include "../main-parts/top-part.php" ?>
 <!-- head, meta tags, css .. end-->

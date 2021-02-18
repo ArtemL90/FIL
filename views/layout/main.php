@@ -76,7 +76,7 @@
                     <img src="../dist/img/main/home-feature-1.jpg" alt="feature-slide-pic" class="swiper-slide-pic" data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
                 </div>
                 <div class="swiper-slide">
-                    <img src="../dist/img/main/home-feature-1.jpg" alt="feature-slide-pic" class="swiper-slide-pic" data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
+                    <img src="../dist/img/main/home-hero-2.jpg" alt="feature-slide-pic" class="swiper-slide-pic" data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
                 </div>
                 <div class="swiper-slide">
                     <img src="../dist/img/main/home-feature-3.jpg" alt="feature-slide-pic" class="swiper-slide-pic" data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
