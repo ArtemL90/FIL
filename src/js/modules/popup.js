@@ -1,11 +1,12 @@
-// import {containerEl, bodyEl, pageTransInterval} from './common.js';
+import {
+  buttonElements,
+  closeElements,
+  popupFormOuterEl,
+  inputEls,
+  blurEl,
+} from './common';
 import { holdBody } from './animation';
 // popup form
-const buttonElements = document.querySelectorAll('.js_popup-btn');
-const closeElements = document.querySelectorAll('.js_close-btn');
-const popupFormOuterEl = document.querySelector('.js_popup-outer');
-const inputEls = document.querySelectorAll('.js_popup-input');
-const blurEl = document.querySelector('.js_blur');
 
 // open popup
 function addPopupClass(elementParent) {

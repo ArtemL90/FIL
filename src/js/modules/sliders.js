@@ -20,7 +20,6 @@ function addDoubleSlider(pageNameStr) {
     },
     noSwipingClass: 'swiper-no-swiping',
   });
-
   const sliderBg = new Swiper(`.js_${pageNameStr}-double-slider-bg`, {
     loop: true,
     effect: 'fade',
@@ -35,7 +34,7 @@ function addDoubleSlider(pageNameStr) {
     },
 
   });
-  sliderBg.on('slideChange', () => {
+  sliderBg.on('slideChange', function() {
     const slideIndxEl = document.querySelector(`.js_${pageNameStr}-double-slider-indx`);
     showSlideIndex(this, slideIndxEl);
   });
@@ -43,6 +42,7 @@ function addDoubleSlider(pageNameStr) {
 }
 // add links slider
 function addLinksSlider() {
+  // eslint-disable-next-line no-unused-vars
   const lnksSlider = new Swiper('.js_lnks-slider', {
     // Optional parameters
     slidesPerView: 6.5,
@@ -61,6 +61,7 @@ function addLinksSlider() {
 
 // add sliders for main page
 function addMainSliders(pageName) {
+  // eslint-disable-next-line no-unused-vars
   const mainSlider = new Swiper('.js_main-slider', {
     // Optional parameters
     loop: true,
@@ -97,7 +98,7 @@ function addGallerySlider(pageNameStr) {
     },
   });
 
-  gallerySlider.on('slideChange', () => {
+  gallerySlider.on('slideChange', function() {
     const slideIndxEl = document.querySelector(`.js_${pageNameStr}-gallery-slider-indx`);
     showSlideIndex(this, slideIndxEl);
   });
