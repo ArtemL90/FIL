@@ -4,8 +4,9 @@
 function setPosition(element, e) {
   const x = e.clientX;
   const y = e.clientY;
-  element.style.left = `${x}px`;
-  element.style.top = `${y}px`;
+  const currentEl = element;
+  currentEl.style.left = `${x}px`;
+  currentEl.style.top = `${y}px`;
 }
 
 // custom cursor
@@ -21,23 +22,27 @@ function addCustomCursor() {
   let cursorActiveFlag = true;
   let areaElFlag = true;
   function showCustomCursor(parent) {
+    const currentParent = parent;
     if (cursorActiveFlag) {
-      parent.style.cursor = 'none';
-      if (parent.classList.contains('js_main-slider')) {
+      currentParent.style.cursor = 'none';
+      if (currentParent.classList.contains('js_main-slider')) {
         cursorEl.classList.add('cursor--light');
       } else {
         cursorEl.classList.add('cursor--dark');
       }
-      dataVal = parent.getAttribute('data-text');
+      dataVal = currentParent.getAttribute('data-text');
       cursorEl.innerHTML = dataVal;
-      return cursorActiveFlag = false;
+      cursorActiveFlag = false;
+      return cursorActiveFlag;
     }
+    return false;
   }
   function hideCustomCursor(parent) {
+    const currentParent = parent;
     cursorEl.className = 'cursor circle-el js_cursor';
     cursorActiveFlag = true;
-    if (parent !== undefined) {
-      parent.style.cursor = 'auto';
+    if (currentParent !== undefined) {
+      currentParent.style.cursor = 'auto';
     }
   }
   document.addEventListener('mousemove', (e) => {
@@ -53,9 +58,11 @@ function addCustomCursor() {
       if (!areaElFlag) {
         if (!cursorActiveFlag) {
           hideCustomCursor(areaEl);
-          return areaElFlag = true;
+          areaElFlag = true;
+          return areaElFlag;
         }
       }
+      return false;
     });
   });
   document.addEventListener('wheel', (e) => {
@@ -71,7 +78,7 @@ function addCustomCursor() {
       cursorActiveFlag = true;
     }
   });
-  document.addEventListener('mousedown', (e) => {
+  document.addEventListener('mousedown', () => {
     if (!cursorActiveFlag) {
       cursorEl.classList.add('cursor--active');
       if (cursorEl.classList.contains('cursor--inactive')) {
@@ -79,7 +86,7 @@ function addCustomCursor() {
       }
     }
   });
-  document.addEventListener('mouseup', (e) => {
+  document.addEventListener('mouseup', () => {
     if (!cursorActiveFlag) {
       cursorEl.classList.add('cursor--inactive');
       if (cursorEl.classList.contains('cursor--active')) {
@@ -91,11 +98,13 @@ function addCustomCursor() {
     lnkEl.addEventListener('click', () => {
       if (!areaElFlag) {
         hideCustomCursor(areaEl);
-        return areaElFlag = true;
+        areaElFlag = true;
+        return areaElFlag;
       }
+      return false;
     });
   });
 }
 addCustomCursor();
 
-export { addCustomCursor };
+export { addCustomCursor as default };

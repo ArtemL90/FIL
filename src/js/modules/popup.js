@@ -9,7 +9,7 @@ const blurEl = document.querySelector('.js_blur');
 
 // open popup
 function addPopupClass(elementParent) {
-  for (const element of elementParent) {
+  elementParent.forEach((element) => {
     element.addEventListener('click', (e) => {
       e.preventDefault();
       holdBody();
@@ -24,10 +24,10 @@ function addPopupClass(elementParent) {
       popupFormOuterEl.classList.add('popup-outer--active');
       blurEl.classList.add('is-blur');
     });
-  }
+  });
 }
 // input anim
-for (const inputEl of inputEls) {
+inputEls.forEach((inputEl) => {
   inputEl.addEventListener('mouseleave', (e) => {
     inputEl.parentElement.classList.remove('popup-request__itm-outer--active');
     if (e.target.value.length) {
@@ -40,14 +40,14 @@ for (const inputEl of inputEls) {
     e.target.parentElement.classList.remove('input-change');
     e.target.parentElement.classList.add('popup-request__itm-outer--active');
   });
-}
+});
 
 addPopupClass(buttonElements);
 addPopupClass(closeElements);
 
 // close popup
-popupFormOuterEl.addEventListener('mouseup', function (e) {
-  if (e.target != this) {
+popupFormOuterEl.addEventListener('mouseup', (e) => {
+  if (e.target !== this) {
     return;
   }
   if (this.classList.contains('popup-outer--active')) {

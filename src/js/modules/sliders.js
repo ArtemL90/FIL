@@ -35,7 +35,7 @@ function addDoubleSlider(pageNameStr) {
     },
 
   });
-  sliderBg.on('slideChange', function () {
+  sliderBg.on('slideChange', () => {
     const slideIndxEl = document.querySelector(`.js_${pageNameStr}-double-slider-indx`);
     showSlideIndex(this, slideIndxEl);
   });
@@ -97,7 +97,7 @@ function addGallerySlider(pageNameStr) {
     },
   });
 
-  gallerySlider.on('slideChange', function () {
+  gallerySlider.on('slideChange', () => {
     const slideIndxEl = document.querySelector(`.js_${pageNameStr}-gallery-slider-indx`);
     showSlideIndex(this, slideIndxEl);
   });
@@ -119,15 +119,15 @@ function addAllSliders() {
   const containerEl = document.querySelector('.js_container');
   const dataPageName = containerEl.dataset.pageName;
   const dataGroupName = containerEl.dataset.groupName;
-  if (dataGroupName == 'main') {
+  if (dataGroupName === 'main') {
     addMainSliders(dataPageName);
   }
-  if (dataGroupName == 'page') {
+  if (dataGroupName === 'page') {
     addPageSliders(dataPageName);
   }
-  if (dataGroupName == 'product') {
+  if (dataGroupName === 'product') {
     addProductSliders(dataPageName);
   }
 }
 addAllSliders();
-export { addAllSliders };
+export { addAllSliders as default };

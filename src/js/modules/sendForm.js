@@ -12,16 +12,16 @@ async function handleFormSubmit(e) {
   const formData = new FormData(form);
 
   try {
-    const request = await fetch(url, {
+    await fetch(url, {
       method: 'POST',
       body: formData,
     });
 
     form.reset();
     popupFormOuterEl.classList.add('popup-outer--thanks');
-    for (const inputEl of inputEls) {
+    inputEls.forEach((inputEl) => {
       inputEl.parentElement.classList.remove('input-change');
-    }
+    });
   } catch (error) {
     console.error('Ошибка:', error);
   }

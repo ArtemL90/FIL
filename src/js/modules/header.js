@@ -77,4 +77,4 @@ navEls.forEach((navEl) => {
   });
 });
 
-export { shineNavLnk };
+export { shineNavLnk as default };

@@ -1,7 +1,7 @@
 import barba from '@barba/core';
-import { addAllSliders } from './sliders';
-import { addCustomCursor } from './custom-cursor';
-import { shineNavLnk } from './header';
+import addAllSliders from './sliders';
+import addCustomCursor from './custom-cursor';
+import shineNavLnk from './header';
 import {
   addAnchorScroll, locoScrollPlugin, addLocoEvents,
 } from './animation';
@@ -21,11 +21,11 @@ barba.hooks.after(() => {
 });
 // delay func
 function delay(n) {
-  n = n || 2000;
+  const num = n || 2000;
   return new Promise((done) => {
     setTimeout(() => {
       done();
-    }, n);
+    }, num);
   });
 }
 
