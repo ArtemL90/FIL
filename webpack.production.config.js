@@ -150,9 +150,11 @@ module.exports = {
     optimization: {
         minimizer: [
             new UglifyJsPlugin({
+                sourceMap: true,
                 parallel: true,
                 uglifyOptions: {
                     include:'./dist/js/[name].js',
+                    sourceMap: true,
                     cashe: true,
                     parallel: true,
                     mangle: true,
@@ -172,6 +174,7 @@ module.exports = {
                 },
             }),
             new CssnanoPlugin({
+                sourceMap: true,
             }),
         ],
     }, 
