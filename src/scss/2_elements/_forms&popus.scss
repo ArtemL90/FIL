@@ -119,11 +119,9 @@
 }
 
 .popup-request {
-  z-index: 1;
-
   &__outer {
     position: relative;
-    z-index: 12;
+    z-index: 11;
     overflow: hidden;
     width: 600px;
     height: 600px;

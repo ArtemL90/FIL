@@ -36,7 +36,7 @@
             inspired the latest MASS Series called “SUMI LIMITED.” 
             The series uses the inky black charred cedar and steel frame. 
             The design highlights the contrast in the materials used.</div>
-            <a  href="#" class="main__concept-left-lnk line-lnk js_popup-btn">Read more</a>
+            <a  href="concept" class="main__concept-left-lnk line-lnk">Read more</a>
         </div>
         <div class="line-block__right main__concept-right pic-rectangle-container">
             <img  src="../dist/img/main/home-concept-s.jpg" alt="rectangle" class="main__concept-right-md pic-rectangle--md">
@@ -132,7 +132,7 @@
             FIL always starts their day with a question of “what it means to have a fulfilling life.” 
             Here with focus on the millennium old Aso tradition, 
             FIL sets off to search materials, functions and designs to represent its tradition.</div>
-            <a href="#" class="main__story-left-lnk line-lnk js_popup-btn">Read more</a>
+            <a href="story" class="main__story-left-lnk line-lnk">Read more</a>
         </div>
         <div class="line-block__right main__story-right  pic-rectangle-container">
             <img src="../dist/img/main/home-story-s.jpg" alt="rectangle" class="main__story-right-md pic-rectangle--md">

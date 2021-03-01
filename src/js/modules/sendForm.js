@@ -1,12 +1,10 @@
-import { popupFormOuterEl, inputEls } from './popup';
-// import {containerEl, bodyEl, pageTransInterval } from './common.js';
+import { popupFormOuterEl, popupFormEl, inputEls } from './common';
 
 // send form (fetch)
-const popupFormEl = document.querySelector('.js_popup-request');
 
 async function handleFormSubmit(e) {
   e.preventDefault();
-
+  e.stopPropagation();
   const form = e.currentTarget;
   const url = form.action;
   const formData = new FormData(form);
@@ -16,12 +14,11 @@ async function handleFormSubmit(e) {
       method: 'POST',
       body: formData,
     });
-
-    form.reset();
     popupFormOuterEl.classList.add('popup-outer--thanks');
     inputEls.forEach((inputEl) => {
       inputEl.parentElement.classList.remove('input-change');
     });
+    form.reset();
   } catch (error) {
     console.error('Ошибка:', error);
   }

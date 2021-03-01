@@ -1,8 +1,7 @@
-// import { containerEl, bodyEl, pageTransInterval } from './common.js';
+import Swiper from 'swiper/bundle';
 
 // init sliders
-// init Swiper Plugin
-import Swiper from 'swiper/bundle';
+
 // add slide index
 function showSlideIndex(sliderName, indxEl) {
   const slideIndxEl = indxEl;
@@ -26,7 +25,7 @@ function addDoubleSlider(pageNameStr) {
     fadeEffect: {
       crossFade: true,
     },
-    speed: 1000,
+    speed: 500,
     touchStartPreventDefault: false,
     pagination: {
       el: `.js_${pageNameStr}-double-slider-pagination`,
@@ -49,7 +48,7 @@ function addLinksSlider() {
     touchStartPreventDefault: false,
     spaceBetween: 20,
     loop: true,
-    speed: 1000,
+    speed: 500,
     breakpoints: {
       640: {
         spaceBetween: 15,
@@ -89,7 +88,7 @@ function addMainSliders(pageName) {
 function addGallerySlider(pageNameStr) {
   const gallerySlider = new Swiper(`.js_${pageNameStr}-gallery-slider`, {
     loop: true,
-    speed: 1000,
+    speed: 500,
     touchStartPreventDefault: false,
     effect: 'fade',
     pagination: {
@@ -115,20 +114,8 @@ function addProductSliders(pageName) {
   addLinksSlider();
 }
 
-// add sliders depending on the date attribute
-function addAllSliders() {
-  const containerEl = document.querySelector('.js_container');
-  const dataPageName = containerEl.dataset.pageName;
-  const dataGroupName = containerEl.dataset.groupName;
-  if (dataGroupName === 'main') {
-    addMainSliders(dataPageName);
-  }
-  if (dataGroupName === 'page') {
-    addPageSliders(dataPageName);
-  }
-  if (dataGroupName === 'product') {
-    addProductSliders(dataPageName);
-  }
-}
-addAllSliders();
-export { addAllSliders as default };
+export {
+  addMainSliders,
+  addPageSliders,
+  addProductSliders,
+};

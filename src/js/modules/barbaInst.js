@@ -1,24 +1,27 @@
 import barba from '@barba/core';
-import addAllSliders from './sliders';
-import addCustomCursor from './custom-cursor';
-import shineNavLnk from './header';
 import {
-  addAnchorScroll, locoScrollPlugin, addLocoEvents,
+  addMainSliders,
+  addPageSliders,
+  addProductSliders,
+} from './sliders';
+import {
+  addCustomCursor,
+  updateCustomCursor,
+} from './custom-cursor';
+import shineNavLnk from './header';
+import { addPopubBtns } from './popup';
+import {
+  addAnchorScroll,
+  locoScrollPlugin,
+  addLocoEvents,
 } from './animation';
-import { pageTransInterval } from './common';
+import {
+  pageTransInterval,
+  transitionEl,
+} from './common';
 
 // init Barba.js plugin
 
-const transitionEl = document.querySelector('.js_page-transition');
-// barba plugin options
-barba.hooks.after(() => {
-  addAllSliders();
-  addCustomCursor();
-  shineNavLnk();
-  addAnchorScroll();
-  locoScrollPlugin.update();
-  addLocoEvents();
-});
 // delay func
 function delay(n) {
   const num = n || 2000;
@@ -28,10 +31,47 @@ function delay(n) {
     }, num);
   });
 }
+function addMainEvents() {
+  addCustomCursor();
+  addLocoEvents();
+  addAnchorScroll();
+  addPopubBtns();
+}
 
 barba.init({
+  views: [
+    {
+      namespace: 'main',
+      afterEnter(data) {
+        const dataPageName = data.next.container.dataset.pageName;
+        addMainEvents();
+        addMainSliders(dataPageName);
+      },
+    },
+    {
+      namespace: 'products',
+      afterEnter() {
+        addMainEvents();
+      },
+    },
+    {
+      namespace: 'page',
+      afterEnter(data) {
+        const dataPageName = data.next.container.dataset.pageName;
+        addMainEvents();
+        addPageSliders(dataPageName);
+      },
+    },
+    {
+      namespace: 'product',
+      afterEnter(data) {
+        const dataPageName = data.next.container.dataset.pageName;
+        addMainEvents();
+        addProductSliders(dataPageName);
+      },
+    },
+  ],
   sync: true,
-
   transitions: [{
     async leave() {
       const done = this.async();
@@ -48,4 +88,11 @@ barba.init({
       });
     },
   }],
+});
+
+barba.hooks.after((data) => {
+  const currentPageName = data.next.container;
+  updateCustomCursor();
+  shineNavLnk(currentPageName);
+  locoScrollPlugin.update();
 });

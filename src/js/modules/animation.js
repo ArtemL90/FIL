@@ -7,7 +7,7 @@ const locoScrollPlugin = new LocomotiveScroll({
   smooth: true,
   getDirection: true,
   reloadOnContextChange: true,
-  touchMultiplier: 3,
+  touchMultiplier: 4,
   tablet: {
     smooth: true,
   },
@@ -16,39 +16,43 @@ const locoScrollPlugin = new LocomotiveScroll({
   },
 
 });
-
 // events loco plugin
 function addLocoEvents() {
-  const lnksSliders = document.querySelectorAll('.js_lnks-slider');
-  const textBlockEls = document.querySelectorAll('.js_text-block');
-  const brandsEls = document.querySelectorAll('.js_brands');
-  const productLnksActiveClass = 'products-lnks__slider-container--active';
-  const brandsActiveClass = 'concept__team-brands--active';
-  const textBlockActiveClass = 'trans-txt-block';
+  const currentLnksSliders = {
+    el: document.querySelectorAll('.js_lnks-slider'),
+    activeClass: 'products-lnks__slider-container--active',
+  };
+  const currentTextBlockEls = {
+    el: document.querySelectorAll('.js_text-block'),
+    activeClass: 'trans-txt-block',
+  };
+  const currentBrandsEls = {
+    el: document.querySelectorAll('.js_brands'),
+    activeClass: 'concept__team-brands--active',
+  };
 
-  function addScrollAnim(elementsClass, elementActiveClass) {
-    elementsClass.forEach((elementClass) => {
-      if (elementClass != null) {
-        elementClass.classList.remove(elementActiveClass, 'visible');
+  function addScrollAnim(elements) {
+    elements.el.forEach((element) => {
+      if (element != null) {
+        element.classList.remove(elements.activeClass, 'visible');
         locoScrollPlugin.on('scroll', () => {
-          if (elementClass.classList.contains(elementActiveClass)) {
+          if (element.classList.contains(elements.activeClass)) {
             return;
           }
-          if (elementClass.classList.contains('visible')) {
-            elementClass.classList.add(elementActiveClass);
+          if (element.classList.contains('visible')) {
+            element.classList.add(elements.activeClass);
           }
         });
       }
     });
   }
   // text block scroll anim
-  addScrollAnim(textBlockEls, textBlockActiveClass);
+  addScrollAnim(currentTextBlockEls);
   // brands anim  concept
-  addScrollAnim(brandsEls, brandsActiveClass);
+  addScrollAnim(currentBrandsEls);
   // lnks slider scroll anim
-  addScrollAnim(lnksSliders, productLnksActiveClass);
+  addScrollAnim(currentLnksSliders);
 }
-addLocoEvents();
 
 // add anchor scroll with loco plugin
 function addAnchorScroll() {
@@ -58,22 +62,23 @@ function addAnchorScroll() {
     const headerElHeight = document.querySelector('.js_header').offsetHeight;
     scrollBtnEl.addEventListener('click', (e) => {
       e.preventDefault();
+      e.stopPropagation();
       locoScrollPlugin.scrollTo(toScrollEl, {
         offset: -(headerElHeight + 100),
       });
     });
   }
 }
-addAnchorScroll();
 
 // hold body
 function holdBody() {
-  bodyEl.classList.toggle('is-fixed');
   if (bodyEl.classList.contains('is-fixed')) {
-    locoScrollPlugin.stop();
-  } else {
     locoScrollPlugin.start();
+    bodyEl.classList.remove('is-fixed');
+    return;
   }
+  bodyEl.classList.add('is-fixed');
+  locoScrollPlugin.stop();
 }
 // preloader
 document.addEventListener('DOMContentLoaded', () => {
@@ -86,5 +91,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 export {
-  holdBody, pageTransInterval, addAnchorScroll, locoScrollPlugin, addLocoEvents,
+  holdBody, addAnchorScroll, locoScrollPlugin, addLocoEvents,
 };

@@ -1,4 +1,4 @@
-// import { containerEl, bodyEl, pageTransInterval } from './common.js';
+import { cursorEl } from './common';
 
 // set position
 function setPosition(element, e) {
@@ -15,8 +15,6 @@ function addCustomCursor() {
     return;
   }
   const areaEls = document.querySelectorAll('.js_swipe-area');
-  const lnkEls = document.querySelectorAll('a');
-  const cursorEl = document.querySelector('.js_cursor');
   let areaEl;
   let dataVal;
   let cursorActiveFlag = true;
@@ -94,17 +92,10 @@ function addCustomCursor() {
       }
     }
   });
-  lnkEls.forEach((lnkEl) => {
-    lnkEl.addEventListener('click', () => {
-      if (!areaElFlag) {
-        hideCustomCursor(areaEl);
-        areaElFlag = true;
-        return areaElFlag;
-      }
-      return false;
-    });
-  });
 }
-addCustomCursor();
 
-export { addCustomCursor as default };
+function updateCustomCursor() {
+  cursorEl.className = 'cursor circle-el js_cursor';
+}
+
+export { addCustomCursor, updateCustomCursor };

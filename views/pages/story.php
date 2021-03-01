@@ -7,7 +7,7 @@
 <!-- head, meta tags, css ..-->
 <?php include "../main-parts/top-part.php" ?>
 <!-- head, meta tags, css .. end-->
-<div class="story page-outer js_container" data-scroll-section data-scroll  data-page-name="story" data-group-name="page" data-barba="container" data-barba-namespace="story">
+<div class="story page-outer js_container" data-scroll-section data-scroll  data-page-name="story" data-group-name="page" data-barba="container" data-barba-namespace="page">
     <section class="story__top section-main">
         <div class="story__top-backgrd">
             <img src="../../dist/img/main/home-hero-3.jpg" alt="backgrd" class="story__top-backgrd-img"  data-scroll  data-scroll-speed="2" data-scroll-repeat="true">

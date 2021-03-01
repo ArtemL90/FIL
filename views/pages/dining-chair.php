@@ -7,7 +7,7 @@
 <!-- head, meta tags, css ..-->
 <?php include "../main-parts/top-part.php" ?>
 <!-- head, meta tags, css .. end-->
-<div class="product page-outer js_container" data-scroll-section data-page-name="dining-chair" data-group-name="product" data-barba="container" data-barba-namespace="dining-chair">
+<div class="product page-outer js_container" data-scroll-section data-page-name="dining-chair" data-group-name="product" data-barba="container" data-barba-namespace="product">
     <section class="product__top section-main">
         <div class="product__top-backgrd">
             <img src="../../dist/img/mass series dining chair/s1-hero-d.jpg" alt="backgrd" class="product__top-backgrd-img" data-scroll  data-scroll-speed="2" data-scroll-repeat="true">

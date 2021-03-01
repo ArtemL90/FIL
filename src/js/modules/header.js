@@ -1,11 +1,12 @@
+import {
+  headerEl,
+  navBackgrs,
+  navEls,
+  menuBtnEl,
+  containerEl,
+} from './common';
 import { locoScrollPlugin, holdBody } from './animation';
-// import {containerEl, bodyEl, pageTransInterval} from './common.js';
-
 // header
-const navEls = document.querySelectorAll('.js_nav-el');
-const headerEl = document.querySelector('.js_header');
-const navBackgrs = document.querySelectorAll('.js_menu-backgr');
-const menuBtnEl = document.querySelector('.js_menu-btn');
 let page;
 
 // add scroll class to header with loco scroll plugin
@@ -32,8 +33,8 @@ function addActiveMenuBackgr() {
   }
 }
 // shine lnk
-function shineNavLnk() {
-  page = document.querySelector('.js_container').getAttribute('data-page-name');
+function shineNavLnk(currentPage) {
+  page = currentPage.getAttribute('data-page-name');
   for (let i = 0; i < navEls.length; i += 1) {
     const newPage = navEls[i].getAttribute('data-page');
     const navElsParent = navEls[i].parentNode;
@@ -44,7 +45,7 @@ function shineNavLnk() {
   }
   addActiveMenuBackgr();
 }
-shineNavLnk();
+shineNavLnk(containerEl);
 // open hidden nav menu
 menuBtnEl.addEventListener('click', () => {
   holdBody();
@@ -65,7 +66,7 @@ navEls.forEach((navEl) => {
   });
   navEl.addEventListener('mouseleave', () => {
     if (headerEl.classList.contains('header--active')) {
-      page = document.querySelector('.js_container').getAttribute('data-page-name');
+      page = containerEl.getAttribute('data-page-name');
       addActiveMenuBackgr();
     }
   });

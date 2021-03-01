@@ -31,7 +31,7 @@
         <div class="thanks js__thanks">
             <h3 class="thanks__ttl">Thanks for request!</h3>
             <div class="thanks__txt">You can continue shopping on our website</div>
-            <button  class="thanks__btn circle-el circle-btn js_popup-btn">
+            <button  class="thanks__btn circle-el circle-btn js_close-btn">
                 <span class="circle-btn__txt">Shop</span>
             </button>
         </div>

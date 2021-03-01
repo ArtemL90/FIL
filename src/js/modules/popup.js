@@ -1,32 +1,27 @@
 import {
-  buttonElements,
-  closeElements,
+  closeBtns,
+  popupOuterEl,
   popupFormOuterEl,
   inputEls,
   blurEl,
 } from './common';
 import { holdBody } from './animation';
+import {
+  updateCustomCursor,
+} from './custom-cursor';
 // popup form
-
 // open popup
-function addPopupClass(elementParent) {
-  elementParent.forEach((element) => {
-    element.addEventListener('click', (e) => {
-      e.preventDefault();
-      holdBody();
-      if (popupFormOuterEl.classList.contains('popup-outer--active')) {
-        if (popupFormOuterEl.classList.contains('popup-outer--active')) {
-          popupFormOuterEl.classList.remove('popup-outer--active');
-        }
-        blurEl.classList.remove('is-blur');
-        return;
-      }
-      popupFormOuterEl.classList.remove('popup-outer--thanks');
-      popupFormOuterEl.classList.add('popup-outer--active');
-      blurEl.classList.add('is-blur');
-    });
-  });
+function hidePopup() {
+  popupOuterEl.classList.remove('popup-outer--active');
+  blurEl.classList.remove('is-blur');
+  holdBody();
 }
+
+closeBtns.forEach((closeBtn) => {
+  closeBtn.addEventListener('click', () => {
+    hidePopup();
+  });
+});
 // input anim
 inputEls.forEach((inputEl) => {
   inputEl.addEventListener('mouseleave', (e) => {
@@ -42,20 +37,23 @@ inputEls.forEach((inputEl) => {
     e.target.parentElement.classList.add('popup-request__itm-outer--active');
   });
 });
+function addPopubBtns() {
+  const buttonElements = document.querySelectorAll('.js_popup-btn');
+  buttonElements.forEach((buttonElement) => {
+    buttonElement.addEventListener('click', () => {
+      popupFormOuterEl.classList.remove('popup-outer--thanks');
+      popupOuterEl.classList.add('popup-outer--active');
+      blurEl.classList.add('is-blur');
+      updateCustomCursor();
+      holdBody();
+    });
+  });
+}
 
-addPopupClass(buttonElements);
-addPopupClass(closeElements);
-
-// close popup
-popupFormOuterEl.addEventListener('mouseup', (e) => {
-  if (e.target !== this) {
-    return;
+popupOuterEl.addEventListener('mouseup', (e) => {
+  if (e.target === popupOuterEl) {
+    hidePopup();
   }
-  if (this.classList.contains('popup-outer--active')) {
-    this.classList.remove('popup-outer--active');
-  }
-  blurEl.classList.remove('is-blur');
-  holdBody();
 });
 
-export { popupFormOuterEl, inputEls };
+export { popupFormOuterEl, inputEls, addPopubBtns };

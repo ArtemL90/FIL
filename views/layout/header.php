@@ -10,7 +10,20 @@
     </div>
     <div class="header__inner page-inner">
         <a href="/">
-            <div class="header__logo main-logo">fil</div>
+            <div class="header__logo main-logo">
+                <svg width="78px" height="48px" viewBox="0 0 78 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+                    <title>F I L</title>
+                    <desc>Created with Sketch.</desc>
+                    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Exo2-Regular, Exo 2" font-size="40" font-weight="normal" letter-spacing="3.000142">
+                        <g id="header__unactive-copy" transform="translate(-103.000000, -92.000000)" fill="#FFFFFF">
+                            <text id="F-I-L">
+                                <tspan x="100.099645" y="120">F I L</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </svg>
+            </div>
         </a>
         <!-- HAMBURGER BTN -->
         <div class="header__hamburg js_menu-btn">
