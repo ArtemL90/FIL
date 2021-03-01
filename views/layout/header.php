@@ -4,7 +4,7 @@
         <div class="header__backgr-outer">
             <img data-page="main" src="../../dist/img/main/home-hero-1.jpg" alt="header-backgr" class="header__backgr js_menu-backgr">
             <img data-page="concept" src="../../dist/img/concept/concept-hero.jpg" alt="header-backgr" class="header__backgr js_menu-backgr">
-            <img data-page="products" src="../../dist/img/products/products-hero.jpg" alt="header-backgr" class="header__backgr js_menu-backgr">
+            <img data-page="products" src="../../dist/img/main/home-hero-2.jpg" alt="header-backgr" class="header__backgr js_menu-backgr">
             <img data-page="story" src="../../dist/img/main/home-hero-3.jpg" alt="header-backgr" class="header__backgr js_menu-backgr">
         </div>
     </div>
