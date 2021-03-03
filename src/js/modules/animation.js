@@ -7,11 +7,12 @@ const locoScrollPlugin = new LocomotiveScroll({
   smooth: true,
   getDirection: true,
   reloadOnContextChange: true,
+  preventTouch: true,
   tablet: {
-    smooth: true,
+    smooth: false,
   },
   smartphone: {
-    smooth: true,
+    smooth: false,
   },
 
 });
