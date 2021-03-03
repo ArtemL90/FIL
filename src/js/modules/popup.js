@@ -1,5 +1,6 @@
 import {
   closeBtns,
+  footerBtn,
   popupOuterEl,
   popupFormOuterEl,
   inputEls,
@@ -37,18 +38,18 @@ inputEls.forEach((inputEl) => {
     e.target.parentElement.classList.add('popup-request__itm-outer--active');
   });
 });
-function addPopubBtns() {
-  const buttonElements = document.querySelectorAll('.js_popup-btn');
-  buttonElements.forEach((buttonElement) => {
-    buttonElement.addEventListener('click', () => {
-      popupFormOuterEl.classList.remove('popup-outer--thanks');
-      popupOuterEl.classList.add('popup-outer--active');
-      blurEl.classList.add('is-blur');
-      updateCustomCursor();
-      holdBody();
-    });
+function addPopubBtn(buttonElement) {
+  buttonElement.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    popupFormOuterEl.classList.remove('popup-outer--thanks');
+    popupOuterEl.classList.add('popup-outer--active');
+    blurEl.classList.add('is-blur');
+    updateCustomCursor();
+    holdBody();
   });
 }
+addPopubBtn(footerBtn);
 
 popupOuterEl.addEventListener('mouseup', (e) => {
   if (e.target === popupOuterEl) {
@@ -56,4 +57,4 @@ popupOuterEl.addEventListener('mouseup', (e) => {
   }
 });
 
-export { popupFormOuterEl, inputEls, addPopubBtns };
+export { popupFormOuterEl, inputEls, addPopubBtn };

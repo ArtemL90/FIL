@@ -4,6 +4,7 @@ const bodyEl = document.querySelector('body');
 const transitionEl = document.querySelector('.js_page-transition');
 const cursorEl = document.querySelector('.js_cursor');
 const closeBtns = document.querySelectorAll('.js_close-btn');
+const footerBtn = document.querySelector('.js_footer-btn');
 const popupOuterEl = document.querySelector('.js_popup-outer');
 const popupFormOuterEl = document.querySelector('.js_popup-request__outer');
 const popupFormEl = document.querySelector('.js_popup-request');
@@ -23,6 +24,7 @@ export {
   pageTransInterval,
   cursorEl,
   closeBtns,
+  footerBtn,
   popupOuterEl,
   popupFormEl,
   popupFormOuterEl,

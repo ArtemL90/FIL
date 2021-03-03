@@ -39,7 +39,7 @@
         </div>
         <div class="footer__part">
             <div class="footer__copyright">© 2020 FIL</div>
-            <button class="footer__btn footer__part-even circle-el circle-btn js_popup-btn">
+            <button class="footer__btn footer__part-even circle-el circle-btn js_footer-btn">
                 <span class="circle-btn__txt">Connect</span>
             </button> 
         </div> 

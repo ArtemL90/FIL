@@ -9,7 +9,7 @@ import {
   updateCustomCursor,
 } from './custom-cursor';
 import shineNavLnk from './header';
-import { addPopubBtns } from './popup';
+import { addPopubBtn } from './popup';
 import {
   addAnchorScroll,
   locoScrollPlugin,
@@ -35,7 +35,6 @@ function addMainEvents() {
   addCustomCursor();
   addLocoEvents();
   addAnchorScroll();
-  addPopubBtns();
 }
 
 barba.init({
@@ -66,8 +65,10 @@ barba.init({
       namespace: 'product',
       afterEnter(data) {
         const dataPageName = data.next.container.dataset.pageName;
+        const popupBtn = data.next.container.querySelector('.js_popup-btn');
         addMainEvents();
         addProductSliders(dataPageName);
+        addPopubBtn(popupBtn);
       },
     },
   ],
