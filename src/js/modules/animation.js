@@ -112,8 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   removePreloader();
 });
-
+const pageHeight = window.innerHeight;
 window.addEventListener('resize', () => {
+  const currentPageHeight = window.innerHeight;
+  if (pageHeight !== currentPageHeight) {
+    return false;
+  }
   window.location.reload();
   return false;
 });
