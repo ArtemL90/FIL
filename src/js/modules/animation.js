@@ -112,13 +112,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   removePreloader();
 });
-const pageHeight = window.innerHeight;
+// reload DOM when window resized
+const pageWidth = window.innerWidth;
 window.addEventListener('resize', () => {
-  const currentPageHeight = window.innerHeight;
-  if (pageHeight !== currentPageHeight) {
+  const currentPageWidth = window.innerWidth;
+  if (pageWidth !== currentPageWidth) {
+    console.log(pageWidth, currentPageWidth)
+    window.location.reload();
     return false;
   }
-  window.location.reload();
   return false;
 });
 
