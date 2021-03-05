@@ -1,20 +1,22 @@
 import LocomotiveScroll from 'locomotive-scroll';
-import { bodyEl, pageTransInterval } from './common';
+import {
+  htmlEl,
+  bodyEl,
+  headerEl,
+} from './common';
 
 // locomotive scroll plugin
 const locoScrollPlugin = new LocomotiveScroll({
   el: document.querySelector('[data-scroll-container]'),
   smooth: true,
   getDirection: true,
-  reloadOnContextChange: true,
-  preventTouch: true,
+  resetNativeScroll: true,
   tablet: {
     smooth: false,
   },
   smartphone: {
     smooth: false,
   },
-
 });
 // events loco plugin
 function addLocoEvents() {
@@ -59,7 +61,7 @@ function addAnchorScroll() {
   const toScrollEl = document.querySelector('.js_scroll-section');
   if (toScrollEl != null) {
     const scrollBtnEl = document.querySelector('.js_scroll');
-    const headerElHeight = document.querySelector('.js_header').offsetHeight;
+    const headerElHeight = headerEl.offsetHeight;
     scrollBtnEl.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -73,13 +75,34 @@ function addAnchorScroll() {
 // hold body
 function holdBody() {
   if (bodyEl.classList.contains('is-fixed')) {
-    locoScrollPlugin.start();
-    bodyEl.classList.remove('is-fixed');
+    if (htmlEl.classList.contains('has-scroll-smooth')) {
+      locoScrollPlugin.start();
+      bodyEl.classList.remove('is-fixed');
+    } else {
+      const body = bodyEl;
+      const scrollY = body.style.top;
+      body.style.top = '';
+      bodyEl.classList.remove('is-fixed');
+      const coordY = parseInt(scrollY || '0', 10) * -1;
+      window.scrollTo(0, coordY);
+    }
     return;
   }
   bodyEl.classList.add('is-fixed');
-  locoScrollPlugin.stop();
+  if (htmlEl.classList.contains('has-scroll-smooth')) {
+    locoScrollPlugin.stop();
+  } else {
+    const body = bodyEl;
+    const scrollY = htmlEl.style.getPropertyValue('--scroll-y');
+    body.style.top = `-${scrollY}`;
+  }
 }
+if (!htmlEl.classList.contains('has-scroll-smooth')) {
+  window.addEventListener('scroll', () => {
+    htmlEl.style.setProperty('--scroll-y', `${window.scrollY}px`);
+  });
+}
+
 // preloader
 document.addEventListener('DOMContentLoaded', () => {
   const preloaderEl = document.querySelector('.js_preloader');
@@ -87,9 +110,17 @@ document.addEventListener('DOMContentLoaded', () => {
     preloaderEl.classList.add('preloader--hidden');
     holdBody();
   }
-  setTimeout(removePreloader, pageTransInterval);
+  removePreloader();
+});
+
+window.addEventListener('resize', () => {
+  window.location.reload();
+  return false;
 });
 
 export {
-  holdBody, addAnchorScroll, locoScrollPlugin, addLocoEvents,
+  holdBody,
+  addAnchorScroll,
+  locoScrollPlugin,
+  addLocoEvents,
 };

@@ -16,6 +16,7 @@ import {
   addLocoEvents,
 } from './animation';
 import {
+  htmlEl,
   pageTransInterval,
   transitionEl,
 } from './common';
@@ -31,10 +32,20 @@ function delay(n) {
     }, num);
   });
 }
+
 function addMainEvents() {
   addCustomCursor();
   addLocoEvents();
   addAnchorScroll();
+}
+
+function addPageTans() {
+  transitionEl.classList.toggle('is-loaded');
+}
+
+function updatePageScroll(callback) {
+  window.scrollTo(0, 0);
+  callback();
 }
 
 barba.init({
@@ -76,17 +87,21 @@ barba.init({
   transitions: [{
     async leave() {
       const done = this.async();
-      transitionEl.classList.remove('is-loaded');
+      addPageTans();
       await delay(pageTransInterval);
       done();
     },
     async enter() {
-      locoScrollPlugin.scrollTo('top', {
-        offset: 0,
-        duration: 5,
-        disableLerp: true,
-        callback: transitionEl.classList.add('is-loaded'),
-      });
+      if (htmlEl.classList.contains('has-scroll-smooth')) {
+        locoScrollPlugin.scrollTo(0, {
+          offset: 0,
+          duration: 1,
+          disableLerp: true,
+          callback: addPageTans,
+        });
+      } else {
+        updatePageScroll(addPageTans);
+      }
     },
   }],
 });

@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   z-index: 10;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -13,11 +13,19 @@
   height: calc(var(--vh, 1vh) * 100); // height for full display
   min-height: 500px;
   background-color: rgba(26, 26, 26, 0.9);
-  animation: fadeOutPopup ease 1s forwards;
-  animation-delay: 0.5s;
+
+  &--inactive,
+  &--active {
+    display: flex;
+  }
+
+  &--inactive {
+    animation: fadeOutPopup ease 0.7s forwards;
+    animation-delay: 0.5s;
+  }
 
   &--active {
-    animation: fadeInPopup ease 1s forwards;
+    animation: fadeInPopup ease 0.7s forwards;
 
     .popup-request {
       &__outer {
@@ -239,6 +247,7 @@
 @keyframes fadeOutPopup {
   0% {
     opacity: 1;
+    visibility: visible;
   }
 
   100% {

@@ -1,6 +1,7 @@
 // const
-const containerEl = document.querySelector('.js_container');
+const htmlEl = document.querySelector('html');
 const bodyEl = document.querySelector('body');
+const containerEl = document.querySelector('.js_container');
 const transitionEl = document.querySelector('.js_page-transition');
 const cursorEl = document.querySelector('.js_cursor');
 const closeBtns = document.querySelectorAll('.js_close-btn');
@@ -19,8 +20,9 @@ const preloaderEl = document.querySelector('.js_preloader');
 const pageTransInterval = 1500;
 
 export {
-  containerEl,
+  htmlEl,
   bodyEl,
+  containerEl,
   pageTransInterval,
   cursorEl,
   closeBtns,

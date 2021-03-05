@@ -95,6 +95,7 @@ function addCustomCursor() {
 }
 
 function updateCustomCursor() {
+  cursorEl.innerHTML = '';
   cursorEl.className = 'cursor circle-el js_cursor';
 }
 

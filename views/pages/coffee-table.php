@@ -16,7 +16,7 @@
             <h1 class="product__top-ttl section-main__ttl">MASS Series<br>900 Coffee Table</h1>
         </div>
         <div class="product__top-inner section-main__inner page-inner">
-            <div class="product__top-subttl"><b>2100 $</b> + tax</div>
+            <div class="product__top-subttl"><b>1740 €</b> + tax</div>
             <div class="product__top-itms section-main__itms">
                 <a href="#" class="product__top-btn circle-btn circle-el js_popup-btn">
                     <span class="circle-btn__txt">Buy</span>

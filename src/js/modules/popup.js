@@ -13,6 +13,7 @@ import {
 // popup form
 // open popup
 function hidePopup() {
+  popupOuterEl.classList.add('popup-outer--inactive');
   popupOuterEl.classList.remove('popup-outer--active');
   blurEl.classList.remove('is-blur');
   holdBody();
