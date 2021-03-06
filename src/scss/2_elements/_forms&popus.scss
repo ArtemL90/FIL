@@ -157,7 +157,6 @@
   }
 
   &__itm {
-    z-index: 1;
     border: 0;
     border-radius: 0;
     padding: 12px;
@@ -167,6 +166,7 @@
     text-align: center;
     color: $base-text-color;
     background-color: transparent;
+    user-select: text;
 
     &::placeholder {
       line-height: 55px;
@@ -207,6 +207,10 @@
           transition: $text-hover-trans;
         }
       }
+    }
+
+    @include mq("tablet-small") {
+      width: 300px;
     }
   }
 }
