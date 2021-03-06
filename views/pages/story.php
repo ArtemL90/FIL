@@ -63,7 +63,7 @@
         </div>
         <div class="story__about-inner page-inner">
             <div class="swiper-container double-slider-info info-card js_story-double-slider-info">
-                <div class="swiper-wrapper double-slider-info__wrapper swiper-no-swiping" >
+                <div class="swiper-wrapper double-slider-info__wrapper">
                     <div class="swiper-slide double-slider-info__slide info-card__content">
                         <h2 class="double-slider-info__slide-ttl">About Noyaki</h2>
                         <h3 class="double-slider-info__slide-subttl">The landscape of&nbsp;Aso</h3>
