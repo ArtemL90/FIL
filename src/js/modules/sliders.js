@@ -17,7 +17,11 @@ function addDoubleSlider(pageNameStr) {
     fadeEffect: {
       crossFade: true,
     },
-    noSwipingClass: 'swiper-no-swiping',
+    breakpoints: {
+      1024: {
+        noSwipingClass: 'double-slider-info__wrapper',
+      },
+    },
   });
   const sliderBg = new Swiper(`.js_${pageNameStr}-double-slider-bg`, {
     loop: true,
@@ -38,6 +42,7 @@ function addDoubleSlider(pageNameStr) {
     showSlideIndex(this, slideIndxEl);
   });
   sliderBg.controller.control = sliderTxt;
+  sliderTxt.controller.control = sliderBg;
 }
 // add links slider
 function addLinksSlider() {

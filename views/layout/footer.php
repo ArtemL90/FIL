@@ -38,7 +38,7 @@
             <a href="#" class="footer__social-itm lnk-effect">Instagram</a>
         </div>
         <div class="footer__part">
-            <div class="footer__copyright">© 2020 FIL</div>
+            <div class="footer__copyright">© 2021 FIL</div>
             <button class="footer__btn footer__part-even circle-el circle-btn js_footer-btn">
                 <span class="circle-btn__txt">Connect</span>
             </button> 

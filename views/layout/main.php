@@ -16,9 +16,7 @@
         </div>
         <!-- MAIN SLIDER END -->
         <div class="main__top-inner section-main__inner page-inner">
-            <h1 class="main__top-ttl section-main__ttl"><span>N</span><span>e</span><span>w</span><br>
-             <span>c</span><span>o</span><span>l</span><span>l</span><span>e</span><span>c</span><span>t</span><span>i</span><span>o</span><span>n</span>
-            </h1>
+            <h1 class="main__top-ttl section-main__ttl">New<br>collection</h1>
             <div class="main__top-itms section-main__itms">
                 <a href="#" class="main__top-scroll scroll-btn lnk-effect js_scroll">Scroll</a>
                 <div class="swiper-pagination js_main-slider-pagination"></div>
@@ -85,7 +83,7 @@
         </div>
         <div class="main__feature-inner page-inner">
             <div class="swiper-container double-slider-info info-card js_main-double-slider-info">
-                <div class="swiper-wrapper double-slider-info__wrapper swiper-no-swiping">
+                <div class="swiper-wrapper double-slider-info__wrapper">
                     <div class="swiper-slide double-slider-info__slide info-card__content">
                         <h2 class="double-slider-info__slide-ttl">Feature</h2>
                         <h3 class="double-slider-info__slide-subttl">Charred inky black represents the&nbsp;culture </h3>

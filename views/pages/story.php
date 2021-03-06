@@ -13,8 +13,7 @@
             <img src="../../dist/img/main/home-hero-3.jpg" alt="backgrd" class="story__top-backgrd-img"  data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
         </div>
         <div class="story__top-inner section-main__inner page-inner">
-            <h1 class="story__top-ttl section-main__ttl">
-                <span>W</span><span>h</span><span>y</span> <span>w</span><span>e</span> <span>d</span><span>o</span></h1>
+            <h1 class="story__top-ttl section-main__ttl">Why we do</h1>
             <div class="story__top-itms section-main__itms">
                 <a href="#" class="story__top-scroll scroll-btn lnk-effect js_scroll">Scroll</a>
             </div>

@@ -11,7 +11,7 @@
     <section class="products__top section-main">
         <img src="../../dist/img/main/home-hero-2.jpg" alt="backgrd" class="products__top-backgrd">
         <div class="products__top-inner section-main__inner page-inner">
-            <h1 class="products__top-ttl section-main__ttl" data-scroll data-scroll-direction="horizontal">Products</h1>
+            <h1 class="products__top-ttl section-main__ttl">Products</h1>
             <div class="products__top-itms section-main__itms">
                 <a href="#" class="products__top-scroll scroll-btn lnk-effect js_scroll">Scroll</a>
             </div>

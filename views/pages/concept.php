@@ -13,10 +13,7 @@
             <img src="../../dist/img/concept/concept-hero.jpg" alt="backgrd" class="concept__top-backgrd-img"  data-scroll  data-scroll-speed="2" data-scroll-repeat="true">
         </div>
         <div class="concept__top-inner section-main__inner page-inner">
-            <h1 class="concept__top-ttl section-main__ttl"><span>T</span><span>h</span><span>e</span>
-                <span>m</span><span>e</span><span>a</span><span>n</span><span>i</span><span>n</span><span>g</span><br>
-                <span>o</span><span>f</span>  
-                <span>T</span><span>r</span><span>a</span><span>d</span><span>i</span><span>t</span><span>i</span><span>o</span><span>n</span></h1>
+            <h1 class="concept__top-ttl section-main__ttl">The meaning<br>of Tradition</h1>
             <div class="concept__top-itms section-main__itms">
                 <a href="#" class="concept__top-scroll lnk-effect scroll-btn js_scroll">Scroll</a>
             </div>
