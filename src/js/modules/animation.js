@@ -117,7 +117,6 @@ const pageWidth = window.innerWidth;
 window.addEventListener('resize', () => {
   const currentPageWidth = window.innerWidth;
   if (pageWidth !== currentPageWidth) {
-    console.log(pageWidth, currentPageWidth)
     window.location.reload();
     return false;
   }
